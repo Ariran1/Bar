@@ -8,6 +8,7 @@ module.exports = function(){
     return $.gulp.src('./src/style.css')
     .pipe( $.gp.sourcemaps.init() )
     .pipe( $.gp.postcss(plugins) )
+    .pipe( $.gp.cleanCss() )
     .pipe( $.gp.sourcemaps.write('.') )
     .pipe( $.gulp.dest('./build/css') )
   });
