@@ -4,9 +4,9 @@ section.productCard
     nav.productCard__navigation
       ul.productCard__navigation-list
         li.productCard__navigation-listItem
-          |Главная
+          a Главная
         li.productCard__navigation-listItem
-          |Не очень главная
+          a Не очень главная
     span.productCard-art
       |Арт.: VSY-236332-fut-2
   div.productCard__content
@@ -22,21 +22,34 @@ section.productCard
         li.productCard__miniPhotos-listItem.productCard__miniPhotos-listItem--active
           img.productCard-image(src="images/shirt.png")
             
-        li.productCard__miniPhotos-listItem.productCard__miniPhotos-listItem--active
+        li.productCard__miniPhotos-listItem
           img.productCard-image(src="images/shirt.png")
             
         li.productCard__miniPhotos-listItem
-          img.productCard-image(src="images/shirt.png")
+          img.productCard-image(src="images/shirt.jpg")
             
     div.productCard__center
       div.productCard__imageContainer
         img.productCard-bigImage(src="images/shirt.png")
+        .shirt__like(data-id='', style='top: 32px; right: 32px; left: auto; width: 40px; height: 40px;')
+          svg.shirt__like--desktop(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', viewbox='0 0 30 30')
+            path.shirt__like-path.shirt__like-path1(d='M20.5,5A6.07,6.07,0,0,0,15,8.75,6.07,6.07,0,0,0,9.5,5,5.46,5.46,0,0,0,4,10.63C4,15,8.28,18.75,15,25c6.72-6.25,11-10,11-14.37A5.46,5.46,0,0,0,20.5,5Z')
+            path.shirt__like-path.shirt__like-path2(d='M20.5,5A6.07,6.07,0,0,0,15,8.75,6.07,6.07,0,0,0,9.5,5,5.46,5.46,0,0,0,4,10.63C4,15,8.28,18.75,15,25c6.72-6.25,11-10,11-14.37A5.46,5.46,0,0,0,20.5,5Z')
+
         span.productCard-saleSticker
         span.productCard__heartForLike
       
       div.productCard__printOnOtherClothes
         div.productCard__printOnOtherClothes-text
-          span Этот принт на другой одежде
+          div.productCard__printOnOtherClothes-links
+            a.productCard__printOnOtherClothes-linkGender.productCard__printOnOtherClothes-linkGender--active(href="/") 
+              | Мужчинам
+            | / 
+            a.productCard__printOnOtherClothes-linkGender(href="/") Женщинам
+            | / 
+            a.productCard__printOnOtherClothes-linkGender(href="/") Мальчикам
+            | / 
+            a.productCard__printOnOtherClothes-linkGender(href="/") Девочкам
         div.productCard__printOnOtherClothes-carousel
           div.productCard__printOnOtherClothes-carouselItem
             a
@@ -81,7 +94,11 @@ section.productCard
         //- для мобилы
         div.productCard__imageContainer-carouselContainer
           span.productCard-saleSticker
-          span.productCard__heartForLike
+          .shirt__like(data-id='', style='top: 32px; right: 32px; left: auto; width: 40px; height: 40px;')
+            svg.shirt__like--desktop(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', viewbox='0 0 30 30')
+              path.shirt__like-path.shirt__like-path1(d='M20.5,5A6.07,6.07,0,0,0,15,8.75,6.07,6.07,0,0,0,9.5,5,5.46,5.46,0,0,0,4,10.63C4,15,8.28,18.75,15,25c6.72-6.25,11-10,11-14.37A5.46,5.46,0,0,0,20.5,5Z')
+              path.shirt__like-path.shirt__like-path2(d='M20.5,5A6.07,6.07,0,0,0,15,8.75,6.07,6.07,0,0,0,9.5,5,5.46,5.46,0,0,0,4,10.63C4,15,8.28,18.75,15,25c6.72-6.25,11-10,11-14.37A5.46,5.46,0,0,0,20.5,5Z')
+
             
           div.productCard__imageContainer-carousel
             img(src="images/shirt.png" width="100%" style="display:block;")

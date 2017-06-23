@@ -2,18 +2,6 @@
   margin: 8px 8px 0 8px;
   box-shadow: 0 8px 64px 0 rgba(0,0,0,0.15);
 }
-.productCard__printOnOtherClothes-links {
-  display: flex;
-  justify-content: space-around;
-  padding: 24px 0px 16px;
-}
-
-.productCard__printOnOtherClothes-linkGender {
-  font-size: 16px;
-  &--active {
-    font-weight: bold;
-  }
-}
 
 @media (max-width:1000px) {
   .productCard__content {
@@ -110,6 +98,11 @@
   }
   .productCard__printOnOtherClothes-text {
     padding: 4px;
+  }
+  .productCard__printOnOtherClothes-linkGender {
+    &--active {
+      color:#4f4f4f;
+    }
   }
   .productCard__printOnOtherClothes .owl-prev,
   .productCard__printOnOtherClothes .owl-next {

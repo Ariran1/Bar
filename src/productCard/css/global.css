@@ -1,6 +1,12 @@
 :root {
   --grey:#bdbdbd;
 }
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+}
 @custom-media --minDesk (min-width:1000px);
 .productCard {
   width:1200px;
@@ -74,9 +80,10 @@ svg {
   padding: 8px 0;
 }
 .productCard__miniPhotos-listItem {
-  padding: 2px;
+  padding:0 2px;
   margin: 16px 0;
   box-sizing: border-box;
+  cursor: pointer;
 }
 .productCard__miniPhotos-listItem--active {
   border: 1px solid #0054a6;
@@ -118,6 +125,19 @@ svg {
 }
 
 
+.productCard__printOnOtherClothes-links {
+  display: flex;
+  justify-content: space-around;
+  padding: 16px 0px 16px;
+}
+
+.productCard__printOnOtherClothes-linkGender {
+  font-size: 16px;
+  &--active {
+    color:#0054a6;
+    font-weight: bold;
+  }
+}
 
 
 
@@ -144,6 +164,7 @@ svg {
   & a {
     text-align: center;
     display: inline-block;
+    width: 100%;
   }
   & svg {
     width:60px;

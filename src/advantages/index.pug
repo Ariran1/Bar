@@ -1,2 +1,31 @@
 .advantages
-  
+  .advantages__infoBlocks-container
+    .advantages__infoBlocks
+      .advantages__infoBlocks-item
+        .advantages__infoBlocks-itemPhoto
+        .advantages__infoBlocks-itemTexts
+          .advantages__infoBlocks-item--close Закрыть
+          .advantages__infoBlock-itemHead Лучшие рубашки и майки
+          p
+          .advantages__infoBlocks-moreInfo
+            span 
+      .advantages__infoBlocks-item
+  .advantages__cards
+    -
+      var cards = [
+          {photoName: 'rus',text: 'Сделано и придумано в России'},
+          {photoName: 'like',text: 'У нас более 10 000 довольных клиентов'},
+          {photoName: 'wash',text: 'Принт не выцветает даже после 300 стирок'},
+          {photoName: 'deli',text: 'Гибкая система доставки'},
+          {photoName: 'card',text: 'Удобная система оплаты'},
+          {photoName: 'shield',text: 'Гарантия возврата'}
+        ];
+    each item in cards
+      .advantages__cards-item
+        span.advantages__cards-moreInfo Подробнее
+        .advantages__cards-svgConteiner
+          svg
+            use(xlink:href='images/advantageIcons.svg#' + item.photoName)
+        p.advantages__cards-text #{item.text}
+    
+    

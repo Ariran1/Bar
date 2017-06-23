@@ -1,4 +1,108 @@
 .advantages {
-  background: #bdbdbd;
-  height:250px;
+  background: #F2F2F2;
+  font-family: "PT Sans";
+  width:100%;
+  overflow-y: hidden;
+  position: relative;
+}
+.advantages__infoBlocks-container {
+  width:100%;
+  position: absolute;
+  overflow-y: hidden;
+  bottom:100%;
+  display: none;
+}
+.advantages__infoBlocks {
+  height: 320px;
+
+  &:after {
+    clear:both;
+  }
+}
+.advantages__infoBlocks-item {
+  float:left;
+  height:inherit;
+}
+.advantages__infoBlocks-head {
+  font-size: 32px;
+  font-weight: bold;
+  padding: 30px 0;
+}
+.advantages__infoBlocks-head ~ p {
+  font-size: 14px;
+}
+.advantages__infoBlocks-moreInfo {
+  color:#0054a6;
+  padding: 40px;
+  font-weight: bold;
+}
+.advantages__infoBlocks-moreInfo:after {
+  content:'';
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =======================================================*/
+.advantages__cards {
+  font-size: 0;
+  max-width: 1200px;
+  margin:auto;
+  position: relative;
+  color:#bdbdbd;
+  display: flex;
+}
+.advantages__cards-item {
+  display: inline-block;
+  vertical-align: top;
+  width:16.666%;
+  font-size: 1rem;
+  text-align: center;
+  padding: 16px 0;
+  margin:16px 0;
+  box-shadow: 0 0px 0px rgba(0,0,0,0.15);
+}
+.advantages__cards-svgConteiner {
+  width:55%;
+  padding-bottom: 55%;
+
+  position: relative;
+  margin:0px auto;
+
+  & svg {
+    fill:currentColor;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+.advantages__cards-moreInfo {
+  padding: 4px 20px 16px;
+  display: inline-block;
+  visibility: hidden;
+  font-size: 0.875em;
+}
+.advantages__cards-text {
+  padding: 30px 20px 10px;
+  font-size: 0.875em;
+  line-height: 1.3em;
+  letter-spacing: 0.02em;
 }

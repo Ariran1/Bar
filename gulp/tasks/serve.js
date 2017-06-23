@@ -20,6 +20,7 @@ module.exports = function(){
 function accept(req, res,next) {
 	let a = req.url;
 
+
   if (req.method == 'POST') {
   	data="";
     req.on('data', function(chunk) {
@@ -37,6 +38,15 @@ function accept(req, res,next) {
     });
     return;
   }
+
+  if (a == '/?link=comments&comments_page=5') {
+		var ads = {
+			items:[]
+		};
+    console.log(ads);
+    res.end(JSON.stringify(ads));
+    return;
+	}
 
 	if (a == '/?link=comments&comments_page=1') {
 		var ads = {

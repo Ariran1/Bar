@@ -22,6 +22,9 @@
   font-size: 0.875em;
   color: #0054a6;
 }
+.bigPrintsCarousel__headText a:hover {
+  opacity: .8;
+}
 .bigPrintsCarousel__item > * {
   margin: 5px 7px 30px;
 }
@@ -48,4 +51,8 @@
   & .owl-next {
     right: 0;
   }
+}
+.owl-prev,
+.owl-next {
+  cursor: pointer;
 }

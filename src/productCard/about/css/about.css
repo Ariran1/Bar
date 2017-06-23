@@ -8,6 +8,13 @@ input[name='productCard__about-show'] {
   padding: 8px 0 16px;
   color:#333;
 }
+.productCard__about-togglers label {
+  cursor: pointer;
+
+  &:hover {
+    color: #666;
+  }
+}
 @media (max-width:1000px) {
 
   .productCard__about-togglers span {

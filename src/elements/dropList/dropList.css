@@ -28,3 +28,14 @@
 [data-style="dropList"] li:hover {
   background: rgba(0,88,164,.1);
 }
+.sizeGrid {
+  background: #4f4f4f;
+  width:90px;
+  margin: 0 auto;
+  color:#fff;
+  line-height: 1.2em;
+  border-radius: 3px;
+  padding: 8px 1px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
