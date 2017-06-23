@@ -1,0 +1,212 @@
+.productCard__imageContainer-carouselContainer {
+  margin: 8px 8px 0 8px;
+  box-shadow: 0 8px 64px 0 rgba(0,0,0,0.15);
+}
+.productCard__printOnOtherClothes-links {
+  display: flex;
+  justify-content: space-around;
+  padding: 24px 0px 16px;
+}
+
+.productCard__printOnOtherClothes-linkGender {
+  font-size: 16px;
+  &--active {
+    font-weight: bold;
+  }
+}
+
+@media (max-width:1000px) {
+  .productCard__content {
+    display: block;
+  }
+  .productCard__imageContainer-carouselContainer {
+    display: block;
+  }
+  .productCard__topLine {
+    display: none;
+  }
+  .productCard__left-productType {
+    display: block;
+  }
+  .productCard__miniPhotos-list {
+    display: none;
+  }
+  .productCard__center {
+    display: none;
+  }
+  .productCard__right .productCard__printOnOtherClothes {
+    display: block;
+  }
+}
+
+
+
+
+
+
+/*@media (max-width:1200px) {
+  .productCard {
+    width:100%;
+  }
+}*/
+
+@media (max-width:1000px) {
+
+
+  .productCard__left {
+    /*display: none;*/
+    width:100%;
+    max-width: 650px;
+    min-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    padding: 2.5% 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  .productCard-back {
+    margin:0;
+    min-width: 110px;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: bold;
+
+    &:after {
+      content:'';
+    }
+  }
+
+
+  .productCard__right {
+    width:100%;
+    max-width: 650px;
+    min-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    padding: 0;
+  }
+  .productCard__mobileCarouselAndBuyBlock {
+    display: block;
+    border:1px solid orange;
+    border-radius: 3px;
+    margin-bottom: 16px;
+  }
+  .productCard__buyBlock {
+    border:none;
+    background: transparent;
+    margin:0;
+  }
+
+  .productCard__buyPreferences-item {
+    position: static;
+  }
+
+  .productCard__printOnOtherClothes {
+    padding: 2.5%;
+  }
+  .productCard__printOnOtherClothes-text {
+    padding: 4px;
+  }
+  .productCard__printOnOtherClothes .owl-prev,
+  .productCard__printOnOtherClothes .owl-next {
+    width:24px;
+    background: #fff;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.15);
+  }
+  .productCard__printOnOtherClothes-carousel {
+    padding:8px 4px;
+    border-style: solid;
+    border-width: 24px 4px 24px 4px;
+    border-image: url(../images/ninePathBlueToGrey.png) 24 4 24 4 stretch;
+  }
+
+  .productCard__printOnOtherClothes .owl-prev svg,
+  .productCard__printOnOtherClothes .owl-next svg {
+    padding: 4px;
+  }
+  .productCard__printOnOtherClothes .owl-prev {
+    border-radius: 7px;
+    left:-10px;
+  }
+  .productCard__printOnOtherClothes .owl-next {
+    border-radius: 7px;
+    right:-10px;
+  }
+
+  .productCard__imageContainer-carousel {
+
+  }
+  .productCard__imageContainer-carousel {
+    & .owl-nav {
+      height:48px;
+    }
+
+    & .owl-prev,
+    & .owl-next {
+      width:1rem;
+      height:1rem;
+
+
+    }
+  }
+  .productCard__imageContainer-carousel {
+
+    & .owl-nav {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      &:before {
+        content:'';
+      }
+      &:after {
+        content:'';
+      }
+    }
+
+    & .owl-dots {
+      width:30%;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #bdbdbd;
+    }
+
+    & .owl-dot {
+      width: 7px;
+      height: 7px;
+      border: 1px solid #bdbdbd;
+      display: inline-block;
+      background: #fff;
+      border-radius: 10px;
+      margin-bottom: -5px;
+
+    }
+    & .owl-dot.active {
+      color: #4f4f4f;
+      background: currentColor;
+      border-color: currentColor;
+    }
+  }
+  .productCard__comments-head {
+    padding: 0 2.5% 32px;
+  }
+}
+
+/* Этот медиа зависит от max-width  .productCard__right,
+                                    .productCard__left
+*/
+@media (max-width:1000px) and (min-width:682px) {
+  .productCard__left {
+    padding: 2.5% 0;
+  }
+}
+@media (max-width:500px) {
+  .productCard__printOnOtherClothes-linkGender {
+    font-size: 13px;
+  }
+
+}

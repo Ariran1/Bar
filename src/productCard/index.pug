@@ -1,0 +1,165 @@
+
+section.productCard
+  div.productCard__topLine
+    nav.productCard__navigation
+      ul.productCard__navigation-list
+        li.productCard__navigation-listItem
+          |Главная
+        li.productCard__navigation-listItem
+          |Не очень главная
+    span.productCard-art
+      |Арт.: VSY-236332-fut-2
+  div.productCard__content
+    div.productCard__left
+      div
+        a.productCard-back
+          svg(viewBox="0 0 48 48")
+            use(xlink:href="#icon-arrow")
+          span Назад
+      span.productCard__left-productType Мужское поло
+      ul.productCard__miniPhotos-list
+        
+        li.productCard__miniPhotos-listItem.productCard__miniPhotos-listItem--active
+          img.productCard-image(src="images/shirt.png")
+            
+        li.productCard__miniPhotos-listItem.productCard__miniPhotos-listItem--active
+          img.productCard-image(src="images/shirt.png")
+            
+        li.productCard__miniPhotos-listItem
+          img.productCard-image(src="images/shirt.png")
+            
+    div.productCard__center
+      div.productCard__imageContainer
+        img.productCard-bigImage(src="images/shirt.png")
+        span.productCard-saleSticker
+        span.productCard__heartForLike
+      
+      div.productCard__printOnOtherClothes
+        div.productCard__printOnOtherClothes-text
+          span Этот принт на другой одежде
+        div.productCard__printOnOtherClothes-carousel
+          div.productCard__printOnOtherClothes-carouselItem
+            a
+              svg(viewBox="0 0 48 48")
+                use(xlink:href="#icon-futbolki")
+              span Футболка
+          div.productCard__printOnOtherClothes-carouselItem
+            a
+              svg(viewBox="0 0 48 48")
+                use(xlink:href="#icon-bomber")
+              span Бомбер
+          div.productCard__printOnOtherClothes-carouselItem.productCard__printOnOtherClothes-carouselItem--active
+            a
+              svg(viewBox="0 0 48 48")
+                use(xlink:href="#icon-hudi")
+              span Худи
+          div.productCard__printOnOtherClothes-carouselItem
+            a
+              svg(viewBox="0 0 48 48")
+                use(xlink:href="#icon-polo")
+              span Поло
+          div.productCard__printOnOtherClothes-carouselItem
+            a
+              svg(viewBox="0 0 48 48")
+                use(xlink:href="#icon-mayki")
+              span Майка
+          div.productCard__printOnOtherClothes-carouselItem
+            a
+              svg(viewBox="0 0 48 48")
+                use(xlink:href="#icon-mayki")
+              span Майка
+          div.productCard__printOnOtherClothes-carouselItem
+            a
+              svg(viewBox="0 0 48 48")
+                use(xlink:href="#icon-mayki")
+              span Майка
+  
+    
+    
+    div.productCard__right
+      div.productCard__mobileCarouselAndBuyBlock
+        //- для мобилы
+        div.productCard__imageContainer-carouselContainer
+          span.productCard-saleSticker
+          span.productCard__heartForLike
+            
+          div.productCard__imageContainer-carousel
+            img(src="images/shirt.png" width="100%" style="display:block;")
+            img(src="images/shirt.jpg" width="100%" style="display:block;")
+            img(src="images/shirt.png" width="100%" style="display:block;")
+            img(src="images/shirt.jpg" width="100%" style="display:block;")
+            
+
+        //- конец для мобилы
+        include buyBlock/index.pug
+        
+      include about/index.pug
+        //- мобильная карусель
+      div.productCard__printOnOtherClothes
+        div.productCard__printOnOtherClothes-text
+          span Этот принт на другой одежде
+          div.productCard__printOnOtherClothes-links
+            a.productCard__printOnOtherClothes-linkGender.productCard__printOnOtherClothes-linkGender--active(href="/") 
+              | Мужчинам
+            a.productCard__printOnOtherClothes-linkGender(href="/") Женщинам
+            a.productCard__printOnOtherClothes-linkGender(href="/") Мальчикам
+            a.productCard__printOnOtherClothes-linkGender(href="/") Девочкам
+        div.productCard__printOnOtherClothes-carousel
+          div.productCard__printOnOtherClothes-carouselItem
+            a
+              svg(viewBox="0 0 48 48")
+                use(xlink:href="#icon-futbolki")
+              span Футболка
+          div.productCard__printOnOtherClothes-carouselItem
+            a
+              svg(viewBox="0 0 48 48")
+                use(xlink:href="#icon-bomber")
+              span Бомбер
+          div.productCard__printOnOtherClothes-carouselItem.productCard__printOnOtherClothes-carouselItem--active
+            a
+              svg(viewBox="0 0 48 48")
+                use(xlink:href="#icon-hudi")
+              span Худи
+          div.productCard__printOnOtherClothes-carouselItem
+            a
+              svg(viewBox="0 0 48 48")
+                use(xlink:href="#icon-polo")
+              span Поло
+          div.productCard__printOnOtherClothes-carouselItem
+            a
+              svg(viewBox="0 0 48 48")
+                use(xlink:href="#icon-mayki")
+              span Майка
+          div.productCard__printOnOtherClothes-carouselItem
+            a
+              svg(viewBox="0 0 48 48")
+                use(xlink:href="#icon-mayki")
+              span Майка
+          div.productCard__printOnOtherClothes-carouselItem
+            a
+              svg(viewBox="0 0 48 48")
+                use(xlink:href="#icon-mayki")
+              span Майка
+      //- Конец мобильной карусели 
+      include reviews/index.pug
+        
+  
+  - var bigPrintsCarouselText = 'Рекомендуем';
+  include ../elements/pigPrintsCarousel/pigPrintsCarousel.pug 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

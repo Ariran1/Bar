@@ -1,0 +1,22 @@
+div(data-style="button")
+  div
+    figure
+      svg(viewBox='0 0 48 48')
+        if button.click
+          - var href = '#icon-click'
+          - var text1 = 'Купить в 1'
+          - var text2 = ' клик'
+        else if button.buy
+          - var href = '#icon-cart'
+          - var text1 = 'В корзину'
+          - var text2 = ''
+        else if button.call
+          - var href = '#icon-call'
+          - var text1 = 'Позвоните'
+          - var text2 = ' мне'
+
+        use(xlink:href=href)
+    
+    span
+      span #{text1}
+        | #{text2}

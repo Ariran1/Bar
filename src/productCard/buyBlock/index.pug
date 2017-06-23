@@ -1,0 +1,39 @@
+
+div.productCard__buyBlock(data-counter)
+
+  div.productCard__buyBlock-action
+    span Акция! -30% осталось 
+      span(data-counter-element="clock" data-counter-reverse)
+        span(data-counter-clock="hours")
+        span(data-counter-clock="minutes")
+        span(data-counter-clock="seconds")
+  h1.productCard-productName Поло Медведь
+  div.productCard__productPrice
+    span.productCard__productPrice-before 2190 Руб.
+    span.productCard__productPrice-after 1590 Руб.
+  div.productCard__buyPreferences
+    span.productCard__buyPreferences-item.productCard__buyPreferences-size(data-droplist-container)
+      - var dropList = ['XS (44)','S (46)','M (48)','L (50)','XL (52)','XXL (54)','3XL (56)'];
+      include ../../elements/dropList/dropList.pug
+      span(data-dropList-result) Выберите размер
+      svg(viewBox="0 0 48 48")
+        use(xlink:href="#icon-arrow")
+          
+    //- span.productCard__buyPreferences-item.productCard__buyPreferences-type
+    //-   - var dropList = ['Хлопок', "Сера", "Огород"];
+    //-   include ../../elements/dropList/dropList.pug
+    //-   span Тип ткани
+    //-   svg(viewBox="0 0 48 48")
+    //-     use(xlink:href="#icon-arrow")
+    
+  div.productCard__buttons
+    - var button = {click:true}
+    include ../../elements/button/button.pug
+    - var button = {buy:true}
+    include ../../elements/button/button.pug
+
+    
+    
+    
+    
+    

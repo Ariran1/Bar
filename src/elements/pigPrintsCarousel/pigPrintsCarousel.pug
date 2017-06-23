@@ -1,0 +1,12 @@
+.bigPrintsCarousel
+	.bigPrintsCarousel__head 
+		.bigPrintsCarousel__headName #{bigPrintsCarouselText}
+		.bigPrintsCarousel__headText 
+			a Смотреть все 
+		
+	.bigPrintsCarousel-carousel
+		- var length = 12;
+		- for (var i = 0; i < length; i++)
+			.bigPrintsCarousel__item
+				- var hoverDrop = 0;
+				include ../catalogCard/catalogCard.pug

@@ -1,0 +1,208 @@
+.siteHeader__underHeader {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 1180px;
+	margin: 0 auto 20px;
+	box-sizing: border-box;
+	font: 400 14px/normal 'PT Sans';
+	z-index: -3;
+	position: relative;
+	background: #f2f2f2;
+	border-radius: 0 0 3px 3px;
+}
+
+.siteHeader__underHeader-previewAction {
+	height: 48px;
+	width:23.852%;
+	border-radius: 0 0 3px 3px;
+}
+.siteHeader__underHeader-siteNav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 75.148%;
+	color:#828282;
+	height: inherit;
+	font-size: 14px;
+}
+.partner:nth-of-type(1) {
+	display: inline;
+}
+.partner:nth-of-type(2) {
+	display: none;
+}
+@media (max-width: 1150px) {
+	.partner:nth-of-type(1) {
+		display: none;
+	}
+	.partner:nth-of-type(2) {
+		display: inline;
+	}
+	.siteHeader__underHeader-siteNav {
+		width: 75.148%;
+	}
+}
+
+.siteHeader__underHeader-siteNav svg{
+    width: 1.5em;
+    height: 1.5em;
+    display: inline-block;
+    vertical-align: middle;
+}
+.siteHeader__underHeader-siteNav li:nth-of-type(2n) {
+	cursor: default;
+}
+.siteHeader__underHeader-siteNav li:nth-of-type(2n + 1) > * {
+	border-bottom: 2px solid transparent;
+	transition: transform .2s ease;
+	padding: 5px 7px 3px;
+}
+.siteHeader__underHeader-siteNav > li:nth-last-of-type(2n + 3) > *:hover {
+	border-bottom: 2px solid #0054a6;
+}
+.siteHeader__underHeader-siteNav li:nth-of-type(1) > * {
+	margin-left: 10px;
+}
+
+
+
+/* Последний li */
+.siteHeader__underHeader-siteNav > li:nth-last-of-type(1) {
+	height: 48px;
+}
+.siteHeader__underHeader-whereMyPost {
+	color: #0054a6;
+	fill:currentColor;
+	display:inline-block;
+	position: relative;
+	vertical-align: middle;
+	border: 1px solid transparent;
+	border-bottom: 0;
+	border-top: 0;
+	padding: 0 20px 0 10px !important;
+	height: inherit;
+	top:1px;
+
+}
+.siteHeader__underHeader-whereMyPost--label {
+	vertical-align: middle;
+}
+@media (max-width: 1150px) {
+.siteHeader__underHeader-whereMyPost {
+	padding: 0 10px 0 10px !important;
+
+}
+}
+.siteHeader__underHeader-whereMyPost:hover {
+	background: #fff;
+	border-color: #bdbdbd;
+}
+.siteHeader__underHeader-whereMyPost ul {
+	position: absolute;
+	display: none;
+	top: 100%;
+	width: 100%;
+	left: -1px;
+	border: 1px solid #bdbdbd;
+	border-top: none;
+	background: #fff;
+}
+
+.siteHeader__underHeader-whereMyPost:hover ul {
+	display: block;
+	border-radius: 0 0 3px 3px;
+	padding-bottom: 10px;
+}
+.siteHeader__underHeader-whereMyPost ul li{
+	padding: 5px 0 3px;
+	margin: 0 10px;
+	color: black;
+	text-align: left;
+}
+
+.siteHeader__underHeader-whereMyPost:hover ul li:first-child{
+	border-top:1px solid #bdbdbd;
+	padding-top:10px;
+}
+
+.siteHeader__underHeader-whereMyPost:hover ul li a {
+	margin:0;
+	padding: 0;
+	display: block;
+}
+
+.siteHeader__underHeader-whereMyPost:hover ul li span{
+	display: inline-block;
+	border-bottom: 2px solid transparent;
+	margin:0;
+	padding: 0;
+
+}
+.siteHeader__underHeader-whereMyPost:hover ul li:hover span{
+	border-color: #0054a6;
+}
+
+
+
+
+
+.siteHeader__underHeader-siteNav .likedProducts {
+	display: inline-block;
+	position: relative;
+	margin: -5px 0;
+	width:auto;
+	height:auto;
+}
+.siteHeader__underHeader-siteNav .likedProducts--active {
+	color:#fff;
+}
+.siteHeader__underHeader-siteNav .likedProducts svg {
+	fill:currentColor;
+}
+.siteHeader__underHeader-siteNav .likedProducts--active svg {
+	fill: #0054a6;
+}
+
+.siteHeader__underHeader-siteNav .likedProducts__count {
+	position: absolute;
+	top:4px;
+	left:0;
+	right:0;
+	bottom:25%;
+	margin:auto;
+	height:1em;
+	text-align: center;
+	width:inherit;
+	font-size: .7em;
+	color:#fff;
+	padding:0;
+	display: none;
+}
+.siteHeader__underHeader-siteNav .likedProducts--active .likedProducts__count {
+	display: block;
+}
+.sale {
+	color:#0054a6;
+}
+.city svg {
+	width: 1.3em;
+	height: 1.3em;
+	fill:#0054a6;
+}
+
+
+@media (max-width: 1220px) {
+	.siteHeader__underHeader {
+		width: 96%;
+		width: calc(100% - 40px);
+		margin:0 auto 20px;
+	}
+}
+
+@media (max-width:999.9px) {
+  .siteHeader,
+  .siteHeader__underHeader {
+    display: none !important;
+  }
+}

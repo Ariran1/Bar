@@ -1,0 +1,16 @@
+.catalogCard
+  a.catalogCard__link( href='')
+    .catalogCard__imageContainer
+      img.catalogCard__image( src='https://printbar.ru/upload/thumb/images/182ef4je61_320x0.jpg', alt='')
+    .catalogCard__contentContainer
+      span.catalogCard__price 1 390  руб
+      .catalogCard__description
+        span.catalogCard__description-name(style='overflow: hidden;') Медведь
+        span.catalogCard__description-type(style='overflow: hidden;') Мужская футболка
+  if (hoverDrop)
+    .catalogCard__hoverContent
+      .catalogCard__hoverContent-buttonContainer
+        - var button = {click:true};
+        include ../button/button.pug
+        //- button.catalogCard__hoverContent-button.js-btn-oneClick(data-id='', data-sex='', data-pair='')
+        //-   span Купить в 1 клик

@@ -1,0 +1,31 @@
+.productCard__topLine {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75em;
+  padding: 0 10px;
+}
+.productCard__navigation-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.productCard__navigation-listItem {
+  color:#828282;
+
+  &:nth-last-of-type(1) {
+    color: var(--grey);
+  }
+  &:after {
+    content:'/';
+    color:inherit;
+    padding:0 3px;
+  }
+  &:nth-last-of-type(1):after {
+    display: none;
+  }
+}
+.productCard-art {
+  padding: 0 15px;
+  color: var(--grey);
+}

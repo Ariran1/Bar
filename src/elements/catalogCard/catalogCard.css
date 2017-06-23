@@ -1,0 +1,101 @@
+
+.catalogCard {
+	position: relative;
+	background: #fff;
+	border-radius: 3px;
+	z-index: 0;
+	margin:20px;
+}
+.catalogCard:hover {
+	z-index: 10;
+	border-radius: 3px 3px 0 0;
+	box-shadow: 0 15px 15px 0 rgba(0, 0, 0, 0.15);
+	-webkit-transition: box-shadow .2s ease;
+	-moz-transition: box-shadow .2s ease;
+	-o-transition: box-shadow .2s ease;
+	transition: box-shadow .2s ease;
+}
+.catalogCard__link {
+	display: block;
+	text-decoration: none;
+	padding: 10px 15px 15px;
+}
+.catalogCard__imageContainer {
+	text-align: center;
+}
+.catalogCard__image {
+	max-width:100%;
+	max-height:232px;
+}
+.catalogCard__contentContainer {
+
+}
+.catalogCard__price {
+	font-weight: 400;
+	letter-spacing: -.02em;
+	color: #000;
+	line-height: 1.5em;
+}
+.catalogCard__description {
+	font-weight: 400;
+	color: #666;
+	font-size: 12px;
+	line-height: 1.4em;
+}
+.catalogCard__description > span {
+	display: block;
+}
+.catalogCard__hoverContent {
+	display: none;
+	position: absolute;
+	top:100%;
+	z-index:1;
+	left:0;
+	width:100%;
+	background: inherit;
+	box-shadow: inherit;
+	border-radius: 0 0 3px 3px;
+
+}
+.catalogCard:hover .catalogCard__hoverContent {
+	display: block;
+}
+.catalogCard__hoverContent-buttonContainer {
+	margin: 0px 15px 14px;
+}
+.catalogCard__hoverContent-button {
+	padding: 0 5px;
+	border-radius: 3px;
+	background: #ff0037;
+	-webkit-transition: all .2s ease;
+	-moz-transition: all .2s ease;
+	-o-transition: all .2s ease;
+	transition: all .2s ease;
+	cursor: pointer;
+	display: block;
+	width: 100%;
+	margin:0;
+	outline: none;
+	border:none;
+	color: #fff;
+	font-size: 14px;
+}
+.catalogCard__hoverContent-button:hover {
+	box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.15);
+	background: #ef0534;
+}
+.catalogCard__hoverContent-button:before {
+	content: '';
+	background: url('https://printbar.ru/images/themes/newDiz/vybor.svg') no-repeat center center;
+	background-size: 33px 28px;
+	padding: 16px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.catalogCard__hoverContent-button span{
+    font-weight: 300;
+	padding: 0px 15px;
+	line-height: 48px;
+    display: inline-block;
+    vertical-align: middle;
+}

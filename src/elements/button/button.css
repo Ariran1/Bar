@@ -1,0 +1,107 @@
+:root {
+  --buttonPadding: 10px;
+  --mobileButtonPadding: 8px;
+}
+[data-style="button"] {
+    padding: var(--buttonPadding);
+    text-align: center;
+    display: block;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 400;
+    stroke:#fff;
+    fill:#fff;
+}
+[data-style="button"]:nth-of-type(1),
+[data-style="button"]:nth-last-of-type(2) {
+  padding-right: calc(var(--buttonPadding) / 2);
+}
+[data-style="button"]:nth-last-of-type(1),
+[data-style="button"]:nth-of-type(2) {
+  padding-left: calc(var(--buttonPadding) / 2);
+}
+[data-style="button"] div {
+    font-size: 1em;
+    font-weight: inherit;
+    color: #fff;
+    padding: 0;
+    margin:0;
+    border-radius: 3px;
+    background: #ff0037;
+    display: block;
+    width: 100%;
+    outline: none;
+    border:none;
+    cursor: pointer;
+    transition: all .2s ease;
+    box-sizing: border-box;
+}
+[data-style="button"] div:hover {
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
+    background: #ef0534;
+}
+[data-style="button"] div:active {
+    box-shadow: 0 5px 4px 0 rgba(0, 0, 0, 0.15);
+    background: #ef0534;
+}
+[data-style="button"] figure {
+    width: 2em;
+    height: 2em;
+    display: inline-block;
+    vertical-align: middle;
+}
+[data-style="button"] figure svg {
+    width: inherit;
+    height: inherit;
+    stroke:inherit;
+    fill:inherit;
+}
+[data-style="button"] div > span{
+    line-height: 3.22em;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+/*Для флексов*/
+[data-style="button"] div:before,
+[data-style="button"] div:after {
+  content:'';
+}
+/*Для флексов конец*/
+
+[data-style="button"] div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+@media screen and (max-width:1000px) and (min-width:500px) {
+  [data-style="button"] div {
+    display: block;
+    & figure {
+      padding-right: 15px;
+    }
+  }
+}
+@media screen and (max-width:400px) {
+  [data-style="button"] {
+      padding: var(--mobileButtonPadding);
+      font-size: 13px;
+  }
+  [data-style="button"]:nth-of-type(1),
+  [data-style="button"]:nth-last-of-type(2) {
+    padding-right: calc(var(--mobileButtonPadding) / 2);
+  }
+  [data-style="button"]:nth-last-of-type(1),
+  [data-style="button"]:nth-of-type(2) {
+    padding-left: calc(var(--mobileButtonPadding) / 2);
+  }
+
+  [data-style="button"] figure {
+    width:1.75em;
+    height:1.75em;
+  }
+}

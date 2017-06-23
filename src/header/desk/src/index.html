@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&amp;subset=cyrillic" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
+	<link rel="stylesheet" href="http://светящийсядомик.рф/Plugins/CSSReset.css">
+	<link rel="stylesheet" href="http://светящийсядомик.рф/Plugins/CSSHelp.css">
+	<script src="http://светящийсядомик.рф/Plugins/Counters.js"></script>
+	<script src="http://светящийсядомик.рф/Plugins/pageDraw.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+	<style>
+		@font-face {
+	    font-family: 'BebasNeue';
+	    src: local('?'),
+	    url('https://printbar.ru/public/fonts/BebasNeueCyrillic.ttf') format('truetype');
+	    font-weight: normal;
+	    font-style: normal;
+	}
+	</style>
+
+
+
+
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+
+<header class="container__siteHeader">
+
+	<div class="siteHeader">
+		<div class="siteHeader__topContainer">
+
+			<p class="siteHeader__siteLogo"><a href="">Print Bar</a></p>
+
+			<div class="siteHeader__aboutWork">
+				<div class="siteHeader__phone">8 (495) 268-08-28</div>
+				<div class="siteHeader__workTime">Ежедневно: 08:00 - 24:00</div>
+			</div>
+
+			<div class="siteHeader__topCenter">
+				<ul class="siteHeader__genderButtons">
+					<li class="siteHeader__genderButton siteHeader__genderButton--active"><a href="">Мужчинам</a></li>
+					<li class="siteHeader__genderButton"><a href="">Женщинам</a></li>
+					<li class="siteHeader__genderButton"><a href="">Детям</a></li>
+				</ul>
+			</div>
+
+								<!--  ВСЕ ИНЛАЙНОВЫЕ СТИЛИ временные и их нужно убрать, как только выкатим личный кабинет. -->
+			<div class="siteHeader__container-account" style="text-align:right;">
+				<!-- Заглушка пока нет ЛК -->
+				<span style=" font-size: 13px; color: #bdbdbd; padding-right: 10px; display: block; white-space: nowrap">Крутые принты для одежды и аксессуаров -</br> выбери свой эксклюзивный дизайн!</span>
+
+				<div class="siteHeader__account" style="display:none;">
+
+					<img src="images/user.svg">
+					<div class="siteHeader__account-content">
+						<div class="siteHeader__account-text">Личный кабинет</div>
+
+						<input type="checkbox" id="siteHeader__account-input">
+
+						<label for="siteHeader__account-input">
+							<span class="siteHeader__account-logIn">Войдите</span>
+							<span>/</span>
+							<span class="siteHeader__account-signUp">Зарегистрируйтесь</span>
+						</label>
+
+						<div class="siteHeader__account-autorization">
+							//= html/autorization.html
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+
+
+
+
+
+		<div class="siteHeader__bottomContainer">
+			<div class="siteHeader__catalogViewer">
+
+				<input id="showCatalog__aDASfgFA" type="checkbox" name="showCatalog__aDASfgFA">
+
+				<!-- не будет работать checked так как id не совпадает с for. устранить по надобности функции checked
+					так же тег класса siteHeader__catalogButton был заменен на div вместо label для переноса каталога внутрь -->
+				<div for="showCatalog__aDASfgF" class="siteHeader__catalogButton">
+
+					<div class="siteHeader__sandwich sandwich animation0">
+						<span class="siteHeader__sandwich-line sw-top"></span>
+						<span class="siteHeader__sandwich-line sw-mid"></span>
+						<span class="siteHeader__sandwich-line sw-bot"></span>
+					</div>
+					<span>Каталог</span>
+					<span class="siteHeader__arrowDown">
+						<svg width="24" height="24" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+							<use xlink:href="#icon-arrowDown" fill="inherit">
+						</svg>
+					</span>
+					<div class="siteHeader__catalogNav">
+						//= html/catalog.html
+					</div>
+				</div>
+			</div>
+			<div class="siteHeader__yourDesign">
+				<a>Свой дизайн</a>
+			</div>
+			<div class="siteHeader__bottomCenter">
+				<form class="siteHeader__searchForm">
+					<label class="siteHeader__searchLabel">
+					<div class="siteHeader__searchIcon">
+						<svg width="25" height="25" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+							<use xlink:href="#icon-search" fill="#828282" />
+						</svg>
+					</div>
+						<input class="siteHeader__searchInput" type="text" name="" placeholder="Поиск">
+						<button class="siteHeader__searchButton">Найти</button>
+					</label>
+				</form>
+			</div>
+			<div class="siteHeader__container-cart">
+				<a class="siteHeader__cart siteHeader__cart--active">
+					<span class="siteHeader__cart-iconContainer">
+						<svg viewBox="0 0 48 48">
+							<use xlink:href="#icon-cart" fill="inherit">
+						</svg>
+						<span class="siteHeader__cart-lotsProductsCount">2</span>
+					</span>
+					<div class="siteHeader__cart-text">
+						<span class="siteHeader__cart-lotsProducts">В корзине 2 товара</span>
+						<span class="siteHeader__cart-cost">на 3998 руб.</span>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+
+
+	<link rel="stylesheet" type="text/css" href="underHeader.css">
+	<div class="siteHeader__underHeader">
+
+		<div class="siteHeader__underHeader-previewAction">
+
+		</div>
+
+		<ul class="siteHeader__underHeader-siteNav">
+			<li><a class="sale">Sale -65%</a></li><li>|</li>
+
+			<li>
+				<a href="" class="city">
+					<svg viewBox="0 0 48 48">
+						<use xlink:href="#icon-geo" fill="inherit" ></use>
+					</svg><!--
+					-->Москва
+				</a>
+			</li><li>|</li>
+
+			<li>
+				<a href="">
+					Магазин
+				</a>
+			</li><li>|</li>
+
+			<li>
+				<a href="">
+					Дизайнерам
+				</a>
+			</li><li>|</li>
+
+			<li>
+				<a href="">
+					Опт
+			</a>
+			</li><li>|</li>
+
+			<li>
+				<a href="">
+					<span class="partner">Партнерская программа</span>
+					<span class="partner">Партнерам</span>
+				</a>
+			</li><li>|</li>
+
+			<li>
+				<a href="">
+					<span class="likedProducts">
+					    <svg class="likedProducts__heart" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 48" version="1.1">
+					        <use xlink:href="#icon-likedProductsHeart" fill="inherit"></use>
+					    </svg>
+					    <div class="likedProducts__count">20</div>
+					</span>
+					<span>Избранное</span>
+				</a>
+			</li><li>|</li>
+
+			<li>
+				<div class="siteHeader__underHeader-whereMyPost">
+					<span>
+						<span class="siteHeader__underHeader-whereMyPost--label">Где мой заказ?</span>
+						<svg viewBox="0 0 48 48">
+							<use xlink:href="#icon-arrowDown">
+						</svg>
+					</span><span class="verticalAlignMethod"></span>
+					<ul>
+						<li>
+							<a href=""><span>Где мой заказ?</span></a>
+						</li>
+						<li>
+							<a href=""><span>Доставка и оплата</span></a>
+						</li>
+						<li>
+							<a href=""><span>Обмен и возврат</span></a>
+						</li>
+						<li>
+							<a href=""><span>Где мой заказ?</span></a>
+						</li>
+						<li>
+							<a href=""><span>FAQ</span></a>
+						</li>
+					</ul>
+				</div><span class="verticalAlignMethod"></span>
+			</li>
+		</ul>
+
+
+	</div>
+
+
+</header>
+
+
+<script src="js/main.js"></script>
+</body>
+
+</html>

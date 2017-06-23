@@ -1,0 +1,94 @@
+
+
+/*    АНИМАЦИЯ 0    */
+/*    АНИМАЦИЯ 0    */
+/*    АНИМАЦИЯ 0    */
+/*    АНИМАЦИЯ 0    */
+/*    АНИМАЦИЯ 0    */
+.sandwich.animation0 .sw-top {
+    transition: transform 0.5s, top 0.2s;
+}
+
+.sandwich.animation0 .sw-mid {
+    transition: transform 0.5s, top 0.2s;
+    transition-delay: 0.2s, 0s;
+}
+
+.sandwich.animation0 .sw-bot {
+    transition: opacity 0.5s,transform 0.5s;
+    transition-delay: 0.1s;
+}
+/*  checked  */
+#showCatalog__aDASfgFA:checked ~ .siteHeader__catalogButton .sandwich.animation0 .sw-top {
+    transform: rotate(135deg) translate(6px, -5.3px);
+}
+
+#showCatalog__aDASfgFA:checked ~ .siteHeader__catalogButton .sandwich.animation0 .sw-mid {
+    transform: rotate(-135deg) translate(0px, 0px);
+}
+
+#showCatalog__aDASfgFA:checked ~ .siteHeader__catalogButton .sandwich.animation0 .sw-bot {
+    opacity: 0;
+    transform: rotate(180deg) translate(0px, 0px);
+}
+
+/*  checked  */
+/*  hover  */
+.siteHeader__catalogButton:hover .sandwich.animation0 .sw-top {
+    transform: rotate(135deg) translate(6px, -5.3px);
+}
+
+.siteHeader__catalogButton:hover .sandwich.animation0 .sw-mid {
+    transform: rotate(-135deg) translate(0px, 0px);
+}
+
+.siteHeader__catalogButton:hover .sandwich.animation0 .sw-bot {
+    opacity: 0;
+    transform: rotate(180deg) translate(0px, 0px);
+}
+
+/*  hover  */
+
+
+
+.sandwich.animation1 .sw-top, .sandwich.animation1 .sw-bot {
+    transition: all .5s ease;
+    left:0;
+}
+.sandwich.animation1 .sw-mid {
+    transition: all .5s ease .3s;
+}
+
+#showCatalog__aDASfgFA:checked ~ .siteHeader__catalogButton .sandwich.animation1 .sw-top,#showCatalog__aDASfgFA:checked ~ .siteHeader__catalogButton  .sandwich.animation1 .sw-bot {
+    transition: all .5s ease .3s;    
+}
+
+#showCatalog__aDASfgFA:checked ~ .siteHeader__catalogButton .sandwich.animation1 .sw-top {
+    width:15px;
+    transform: rotate(-45deg) translate(-4px, 1px);
+}
+
+#showCatalog__aDASfgFA:checked ~ .siteHeader__catalogButton .sandwich.animation1 .sw-mid {
+    transform: rotate(180deg);
+    transition: all .5s ease;
+    -webkit-animation: revers 1s ease;
+    animation: revers 1s ease;
+}
+
+#showCatalog__aDASfgFA:checked ~ .siteHeader__catalogButton .sandwich.animation1 .sw-bot {
+    width:15px;
+    transform: rotate(45deg) translate(-4px, -1px);
+}
+@keyframes revers {
+    0% {
+        transform: rotate(0deg) translateX(0px);
+    }
+
+    50% {
+        transform: rotate(180deg) translateX(-10px);
+    }
+
+    100% {
+        transform: rotate(180deg) translateX(0px);
+    }
+}
