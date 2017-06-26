@@ -25,10 +25,7 @@ a {
     font-size: 8px;
   }
 }*/
-svg {
-  width:48px;
-  height:48px;
-}
+
 .productCard__content {
   display: flex;
   justify-content: space-between;

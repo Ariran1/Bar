@@ -1,5 +1,6 @@
 
-.advantages__cards-item:hover {
+.advantages__cards-item:hover,
+.advantages__cards-item--active {
   background: #fff;
   box-shadow: 0 14px 16px rgba(0,0,0,0.15);
   border-radius: 3px;
@@ -7,13 +8,20 @@
   cursor: default;
   transition: box-shadow .2s ease;
 }
-.advantages__cards-item:hover .advantages__cards-text {
+.advantages__cards-item:hover .advantages__cards-text,
+.advantages__cards-item--active .advantages__cards-text {
   font-weight: bold;
 }
 .advantages__cards-moreInfo:hover {
   cursor: pointer;
 }
 
-.advantages__cards-item:hover .advantages__cards-moreInfo {
+.advantages__cards-item:hover .advantages__cards-moreInfo,
+.advantages__cards-item--active .advantages__cards-moreInfo {
   visibility: visible;
+}
+@media (max-width:1000px) {
+  .advantages__cards-item .advantages__cards-moreInfo {
+      visibility: hidden!important; 
+  }
 }

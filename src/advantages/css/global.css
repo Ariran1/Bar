@@ -2,18 +2,19 @@
   background: #F2F2F2;
   font-family: "PT Sans";
   width:100%;
-  overflow-y: hidden;
   position: relative;
 }
 .advantages__infoBlocks-container {
   width:100%;
   position: absolute;
-  overflow-y: hidden;
+  overflow-x: hidden;
   bottom:100%;
   display: none;
+  height: 320px;
 }
 .advantages__infoBlocks {
-  height: 320px;
+  height:inherit;
+  color:#4f4f4f;
 
   &:after {
     clear:both;
@@ -22,25 +23,90 @@
 .advantages__infoBlocks-item {
   float:left;
   height:inherit;
+  background: #fff;
+  font-size: 14px;
 }
-.advantages__infoBlocks-head {
+.advantages__infoBlocks-itemAlign {
+  width:1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  height:inherit;
+  box-shadow: 0 15px 62px rgba(0,0,0,0.15);
+  &:after {
+    clear:both;
+  }
+}
+.advantages__infoBlocks-itemPhoto {
+  width:500px;
+  height:inherit;
+  float:left;
+}
+.advantages__infoBlocks-itemTexts {
+  float:left;
+  width:700px;
+  padding: 32px 80px 0;
+  box-sizing: border-box;
+}
+.advantages__infoBlock-itemHead {
   font-size: 32px;
   font-weight: bold;
-  padding: 30px 0;
+  color:#0054a6;
+  padding: 4px 40px 16px 0;
 }
-.advantages__infoBlocks-head ~ p {
-  font-size: 14px;
+.advantages__infoBlock-itemHead ~ p {
+  line-height: 1.2em;
+  padding: 6px 0;
+
+  & span {
+    font-weight: bold;
+  }
+  & a {
+    color:#0054a6;
+    font-weight: bold;
+    &:hover {
+      opacity:.8;
+    }
+  }
+}
+.advantages__infoBlock-itemHead ~ ul {
+  padding: 10px 30px;
+  line-height: 1.4em;
 }
 .advantages__infoBlocks-moreInfo {
   color:#0054a6;
-  padding: 40px;
+  padding: 30px 30px 0;
   font-weight: bold;
+  & a {
+    vertical-align: middle;
+  }
+  &:hover:after {
+    margin-left:8px;
+  }
+
+  &:after {
+    content:'';
+    background: url(../images/arrowRightAdvantages.svg) no-repeat center center;
+    padding: 10px;
+    margin-left: 2px;
+    display: inline-block;
+    vertical-align: middle;
+    transition: all .2s ease;
+  }
 }
 .advantages__infoBlocks-moreInfo:after {
   content:'';
 }
+.advantages__infoBlocks-item--close {
+  text-align: right;
+  cursor: pointer;
+  color:#0054a6;
+}
 
-
+@media (max-width:1000px) {
+  .advantages__infoBlocks-container {
+    display: none !important;
+  }
+}
 
 
 
@@ -75,6 +141,20 @@
   padding: 16px 0;
   margin:16px 0;
   box-shadow: 0 0px 0px rgba(0,0,0,0.15);
+  cursor: pointer; 
+}
+@media (max-width:1000px) {
+  .advantages__cards {
+    display: block;
+  }
+  .advantages__cards-item {
+    width:33.333%;
+  }
+}
+@media (max-width:500px) {
+  .advantages__cards-item {
+    width:50%;
+  }
 }
 .advantages__cards-svgConteiner {
   width:55%;

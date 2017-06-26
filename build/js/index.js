@@ -133,7 +133,7 @@
 		        var fileReader = new FileReader();
 
 		        fileReader.addEventListener("load", (event) => {
-		            console.log("loaded");
+
 		            var src = event.target.result;
 
 
@@ -320,14 +320,12 @@
 			this.comments.data
 			.then((data)=>{
 				// если при загрузке коментов, коментов нет, то окно для оставления комента открыто.
-				console.log(data,'data');
 
 				if (data.items.length === 0) {
-					console.log(1234);
+
 					this.comments.content = `<div class="productCard__comment-none" style=" text-align: center; padding: 30px;">
-	            <svg style=" width: 170px; height: 125px;display:inline-block;">
-	              <use xlink:href="images/noneReviews.svg#qwe"></use>
-	            </svg>
+	              <img src="images/noneReviews.svg" style=" height: 125px;display:inline-block;">
+
 	            <p style=" padding: 20px;">Здесь пока нет отзыва, оставьте свой!</p>
 	          </div>`;
 					return null;
@@ -1054,8 +1052,57 @@
 	    this.carousContainer = document.querySelector('.advantages__infoBlocks-container');
 	    this.carous = document.querySelector('.advantages__infoBlocks');
 	    this.carousChilds = document.querySelectorAll('.advantages__infoBlocks-item');
-	    console.log(this.carousChilds.length * 100 + '%');
-	    this.carous.style.width = this.carousChilds.length * 100 + '%';
+
+	    this.carous.style.width = this.carousChilds.length * document.documentElement.clientWidth  + 'px';
+	    this.cards = document.querySelectorAll('.advantages__cards-item');
+
+	    for (var i = 0; i < this.carousChilds.length; i++) {
+	      this.carousChilds[i].style.width = document.documentElement.clientWidth  + 'px';
+	    }
+
+	    for (var i = 0; i < this.cards.length; i++) {
+	      this.cards[i].addEventListener('click',(e)=>{
+	        this.selectCard(e);
+	        e.currentTarget.classList.add('advantages__cards-item--active');
+	      });
+	    }
+
+
+	    this.setSizes();
+	    window.onresize = ()=>{
+	      this.setSizes();
+	    };
+	    this.close();
+	  }
+
+	  setSizes() {
+	    for (var i = 0; i < this.carousChilds.length; i++) {
+	      this.carousChilds[i].style.width = document.documentElement.clientWidth  + 'px';
+	    }
+	  }
+
+	  selectCard(e) {
+	    for (var i = 0; i < this.cards.length; i++) {
+	      this.cards[i].classList.remove('advantages__cards-item--active');
+	    }
+	    for (var i = 0; i < this.cards.length; i++) {
+	      if (this.cards[i] == e.currentTarget) {
+	        this.carousContainer.style.display = 'block';
+	        this.carous.style.transform = 'translateX(-' + i * document.documentElement.clientWidth  + 'px)';
+	        return;
+	      }
+	    }
+	  }
+	  close() {
+	    let closes = document.querySelectorAll('.advantages__infoBlocks-item--close');
+	    for (var i = 0; i < closes.length; i++) {
+	      closes[i].addEventListener('click',(e)=>{
+	        this.carousContainer.style.display = 'none';
+	        for (var i = 0; i < this.cards.length; i++) {
+	          this.cards[i].classList.remove('advantages__cards-item--active');
+	        }
+	      });
+	    }
 	  }
 	}
 	document.addEventListener('DOMContentLoaded',()=>{
