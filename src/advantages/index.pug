@@ -4,7 +4,8 @@
       .advantages__infoBlocks-item
         .advantages__infoBlocks-itemAlign
         
-          .advantages__infoBlocks-itemPhoto(style="background: url(images/card2.png) no-repeat center center;")
+          .advantages__infoBlocks-itemPhoto
+            <iframe width="500" height="315" src="https://www.youtube.com/embed/MB20vEU3oy0" frameborder="0" allowfullscreen></iframe>
           .advantages__infoBlocks-itemTexts
             .advantages__infoBlocks-item--close Закрыть
             .advantages__infoBlock-itemHead Придумано и сделано в России
@@ -18,7 +19,7 @@
       .advantages__infoBlocks-item
         .advantages__infoBlocks-itemAlign
 
-          .advantages__infoBlocks-itemPhoto(style="background: url(images/card2.png) no-repeat center center;")
+          .advantages__infoBlocks-itemPhoto(style="background: url(images/card2.jpg) no-repeat center center;")
           .advantages__infoBlocks-itemTexts
             .advantages__infoBlocks-item--close Закрыть
             .advantages__infoBlock-itemHead У нас более 60 000 довольных клиентов
@@ -29,7 +30,7 @@
       .advantages__infoBlocks-item
         .advantages__infoBlocks-itemAlign
         
-          .advantages__infoBlocks-itemPhoto
+          .advantages__infoBlocks-itemPhoto(style="background: url(images/card3.jpg) no-repeat center center;")
           .advantages__infoBlocks-itemTexts
             .advantages__infoBlocks-item--close Закрыть
             .advantages__infoBlock-itemHead Принт не выцветает даже после 300 стирок
@@ -45,7 +46,7 @@
       .advantages__infoBlocks-item
         .advantages__infoBlocks-itemAlign
         
-          .advantages__infoBlocks-itemPhoto(style="background: url(images/card2.png) no-repeat center center;")
+          .advantages__infoBlocks-itemPhoto(style="background: url(images/card4.png) no-repeat center center;")
           .advantages__infoBlocks-itemTexts
             .advantages__infoBlocks-item--close Закрыть
             .advantages__infoBlock-itemHead Гибкая система доставки
@@ -62,7 +63,7 @@
       .advantages__infoBlocks-item
         .advantages__infoBlocks-itemAlign
         
-          .advantages__infoBlocks-itemPhoto(style="background: url(images/card2.png) no-repeat center center;")
+          .advantages__infoBlocks-itemPhoto(style="background: url(images/card5.png) no-repeat center center;")
           .advantages__infoBlocks-itemTexts
             .advantages__infoBlocks-item--close Закрыть
             .advantages__infoBlock-itemHead Удобная система оплаты
@@ -78,7 +79,7 @@
       .advantages__infoBlocks-item
         .advantages__infoBlocks-itemAlign
           
-          .advantages__infoBlocks-itemPhoto(style="background: url(images/card1.png) no-repeat center center;")
+          .advantages__infoBlocks-itemPhoto(style="background: url(images/card6.png) no-repeat center center;")
           .advantages__infoBlocks-itemTexts
             .advantages__infoBlocks-item--close Закрыть
             .advantages__infoBlock-itemHead Легкий обмен и возврат
@@ -86,22 +87,24 @@
               Товар, заказанный на Printbar.ru и не подошедший по каким-либо причинам (фасон, размер, цвет), может быть возвращен в течение 14 дней, не считая дня покупки.
             .advantages__infoBlocks-moreInfo
               a Подробнее о условиях возврата
-  .advantages__cards
-    -
-      var cards = [
-          {photoName: 'rus',text: 'Сделано и придумано в России'},
-          {photoName: 'like',text: 'У нас более 10 000 довольных клиентов'},
-          {photoName: 'wash',text: 'Принт не выцветает даже после 300 стирок'},
-          {photoName: 'deli',text: 'Гибкая система доставки'},
-          {photoName: 'card',text: 'Удобная система оплаты'},
-          {photoName: 'shield',text: 'Гарантия возврата'}
-        ];
-    each item in cards
-      .advantages__cards-item
-        span.advantages__cards-moreInfo Подробнее
-        .advantages__cards-svgConteiner
-          svg
-            use(xlink:href='images/advantageIcons.svg#' + item.photoName)
-        p.advantages__cards-text #{item.text}
-    
-    
+              
+  .advantages__cardsContainer
+    .advantages__cards
+      -
+        var cards = [
+            {photoName: 'rus',text: 'Сделано и придумано в России'},
+            {photoName: 'like',text: 'У нас более 10 000 довольных клиентов'},
+            {photoName: 'wash',text: 'Принт не выцветает даже после 300 стирок'},
+            {photoName: 'deli',text: 'Гибкая система доставки'},
+            {photoName: 'card',text: 'Удобная система оплаты'},
+            {photoName: 'shield',text: 'Гарантия возврата'}
+          ];
+      each item in cards
+        .advantages__cards-item
+          span.advantages__cards-moreInfo Подробнее
+          .advantages__cards-svgConteiner
+            svg
+              use(xlink:href='images/advantageIcons.svg#' + item.photoName)
+          p.advantages__cards-text #{item.text}
+      
+      

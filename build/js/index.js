@@ -1048,7 +1048,7 @@
 
 	class advantages {
 	  constructor() {
-	    console.log(1);
+
 	    this.carousContainer = document.querySelector('.advantages__infoBlocks-container');
 	    this.carous = document.querySelector('.advantages__infoBlocks');
 	    this.carousChilds = document.querySelectorAll('.advantages__infoBlocks-item');
@@ -1082,6 +1082,7 @@
 	  }
 
 	  selectCard(e) {
+	    document.querySelector('.advantages__cardsContainer').classList.add('advantages__cardsContainer--active');
 	    for (var i = 0; i < this.cards.length; i++) {
 	      this.cards[i].classList.remove('advantages__cards-item--active');
 	    }
@@ -1097,6 +1098,7 @@
 	    let closes = document.querySelectorAll('.advantages__infoBlocks-item--close');
 	    for (var i = 0; i < closes.length; i++) {
 	      closes[i].addEventListener('click',(e)=>{
+	        document.querySelector('.advantages__cardsContainer--active').classList.remove('advantages__cardsContainer--active');
 	        this.carousContainer.style.display = 'none';
 	        for (var i = 0; i < this.cards.length; i++) {
 	          this.cards[i].classList.remove('advantages__cards-item--active');

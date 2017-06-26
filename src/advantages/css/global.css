@@ -20,6 +20,16 @@
     clear:both;
   }
 }
+.advantages__cardsContainer {
+  position: relative;
+  z-index: 9;
+  transition:all .2s ease;
+  background: #f2f2f2;
+
+  &--active {
+    box-shadow: 0 4px 64px rgba(0,0,0,0.15)
+  }
+}
 .advantages__infoBlocks-item {
   float:left;
   height:inherit;
@@ -79,15 +89,16 @@
   & a {
     vertical-align: middle;
   }
-  &:hover:after {
+  & a:hover:after {
     margin-left:8px;
   }
 
-  &:after {
+  & a:after {
     content:'';
     background: url(../images/arrowRightAdvantages.svg) no-repeat center center;
     padding: 10px;
     margin-left: 2px;
+    margin-top:-2px;
     display: inline-block;
     vertical-align: middle;
     transition: all .2s ease;
@@ -141,7 +152,7 @@
   padding: 16px 0;
   margin:16px 0;
   box-shadow: 0 0px 0px rgba(0,0,0,0.15);
-  cursor: pointer; 
+  cursor: pointer;
 }
 @media (max-width:1000px) {
   .advantages__cards {
