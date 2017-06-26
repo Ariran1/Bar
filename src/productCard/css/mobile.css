@@ -187,7 +187,12 @@
   .productCard__comments-head {
     padding: 0 2.5% 32px;
   }
+  .productCard-saleSticker {
+    top:2%;
+    font-size: 1em;
+  }
 }
+
 
 /* Этот медиа зависит от max-width  .productCard__right,
                                     .productCard__left

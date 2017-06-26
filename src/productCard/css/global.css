@@ -139,9 +139,23 @@ a {
   }
 }
 
+.productCard-saleSticker {
+  color: #ff9333;
+  position: absolute;
+  padding: 0 12px;
+  left:6%;
+  top:6%;
+  font-size: 1.5em;
+  border-radius: 20px;
+  border: 1px solid currentColor;
+  z-index: 5;
+}
 
-
-
+@media (max-width:1200px) {
+  .productCard-saleSticker {
+    font-size: 1.3em;
+  }
+}
 
 
 /* =============================riht*/
