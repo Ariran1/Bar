@@ -1,0 +1,42 @@
+.catalog {
+  font:400 16px/normal 'PT Sans';
+  width:1200px;
+  position: relative;
+  margin: 0 auto;
+
+}
+.catalog__leftBar {
+  width: 16.666%;
+}
+.catalog__leftBar-topInfo {
+  padding: 8px 10px;
+  box-sizing: border-box;
+}
+.catalog__name {
+  font-family: 'BebasNeue';
+  font-size: 32px;
+  padding: 16px 0;
+
+  & span {
+    color:#0054a6;
+  }
+}
+.catalog__barButton {
+  width:100%;
+  border:1px solid currentColor;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.05);
+  background: transparent;
+  border-radius: 3px;
+  padding: 8px 10px;
+  margin:16px 0;
+  display: block;
+  box-sizing: border-box;
+  text-align: center;
+
+  &.catalog__yourDesign {
+    color:#0054a6;
+  }
+  &.catalog__action {
+    color:#ff0037;
+  }
+}

@@ -120,6 +120,19 @@ a {
   max-height: 800px;
   max-height: 90vh;
 }
+.productCard-download {
+  display: block;
+  
+  & svg {
+    fill: rgba(0,0,0,.05);
+    position: absolute;
+    bottom: 30px;
+    left:30px;
+    width:32px;
+    height:32px;
+    z-index: 3;
+  }
+}
 
 
 .productCard__printOnOtherClothes-links {

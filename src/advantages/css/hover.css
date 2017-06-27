@@ -1,5 +1,10 @@
 
-.advantages__cards-item:hover,
+.advantages__cards-item:hover {
+  color:#0054a6;
+  cursor: pointer;
+  transition: box-shadow .2s ease;
+}
+
 .advantages__cards-item--active {
   background: #fff;
   box-shadow: 0 14px 16px rgba(0,0,0,0.15);
@@ -22,6 +27,6 @@
 }
 @media (max-width:1000px) {
   .advantages__cards-item .advantages__cards-moreInfo {
-      visibility: hidden!important; 
+      visibility: hidden!important;
   }
 }

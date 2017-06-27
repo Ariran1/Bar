@@ -7,7 +7,6 @@
 .advantages__infoBlocks-container {
   width:100%;
   position: absolute;
-  overflow-x: hidden;
   bottom:100%;
   display: none;
   height: 320px;

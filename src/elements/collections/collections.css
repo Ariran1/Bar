@@ -1,0 +1,66 @@
+.collection {
+  font:400 16px/normal 'PT Sans';
+  padding: 10px;
+
+  & input {
+    display: none;
+  }
+}
+.collection__inputShow:checked ~ .collection__itemsList {
+  display: block;
+}
+.collection__inputShow:checked ~ .collection__labelShow {
+  color:#0054a6;
+  font-weight: bold;
+  & svg {
+    transform: rotate(270deg);
+    transition: transform .2s ease;
+  }
+}
+.collection__name {
+  font-size: 0.875em;
+}
+.collection__itemsList {
+  display: none;
+  background: #fff;
+  margin:0 -10px 12px -40px;
+  padding: 16px 10px 24px 40px;
+  box-shadow: 0 0 2px rgba(0,0,0,0.15), 0 2px 64px rgba(0,0,0,0.05);
+  border-radius: 3px;
+}
+.collection__item {
+  font-weight: bold;
+}
+.collection__labelShow {
+  position: relative;
+  & span {
+  }
+  & svg {
+    display: block;
+    position: absolute;
+    top:0;
+    margin: 0 4px;
+    bottom:0;
+    fill: currentColor;
+    left:-40px;
+    vertical-align: middle;
+    height: 32px;
+    box-sizing: border-box;
+    width: 32px;
+    padding: 8px;
+    transform: rotate(90deg);
+    transition: transform .2s ease .2s,opacity .2s ease .3s;
+  }
+}
+.collection__labelShow,
+.collection__nameLink,
+.collection__link {
+  padding: 8px 0 7px;
+  display: inline-block;
+  cursor: pointer;
+}
+.collection__itemCount {
+  color:#888;
+  padding: 0 0 0 4px;
+  font-weight: normal;
+}

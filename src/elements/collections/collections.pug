@@ -1,0 +1,37 @@
+
+
+
+
+
+- var pictures = ['Рисунки и картинки','Посмотреть все','Dark','Abstraction','Art Core','Color','Мемы','Vegan','Надписи','Для мужчин','Черепа','Dark'];
+- var numbers = ['23','8676','518','789','90','98','707','1','21','8','231','65'];
+
+.collection
+  .collection__name
+    a.collection__nameLink Еда
+  .collection__name
+    a.collection__nameLink Аквариумы
+    
+  - for ( var t = 0; t < 3; t++ )
+    - var a = 'showColumn_' + 10000 + +(Math.random() * 89999).toFixed(0);
+    .collection__name
+      input.collection__inputShow(id=a type="radio" name="collectionShowInputs")
+      label.collection__labelShow(for=a)
+        svg(viewBox="0 0 48 48")
+          use(xlink:href="#icon-arrow")
+        span Рыбки
+      ul.collection__itemsList
+        - for ( var i = 0; i < pictures.length; i++ )
+          li.collection__item
+            a.collection__link
+              | #{pictures[i]}
+              span.collection__itemCount (#{numbers[i]})
+  
+  .collection__name
+    a.collection__nameLink Еда
+  .collection__name
+    a.collection__nameLink Краски
+  .collection__name
+    a.collection__nameLink Канат
+  .collection__name
+    a.collection__nameLink Морена

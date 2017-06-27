@@ -24,6 +24,10 @@
   font-size: 1.5em;
   font-weight: bold;
   text-align: center;
+
+  & .productCard__buyBlock-art {
+    display: none;
+  }
 }
 .productCard__productPrice {
   padding: 2px 20px 8px;

@@ -52,10 +52,8 @@
 
 								<!--  ВСЕ ИНЛАЙНОВЫЕ СТИЛИ временные и их нужно убрать, как только выкатим личный кабинет. -->
 			<div class="siteHeader__container-account" style="text-align:right;">
-				<!-- Заглушка пока нет ЛК -->
-				<span style=" font-size: 13px; color: #bdbdbd; padding-right: 10px; display: block; white-space: nowrap">Крутые принты для одежды и аксессуаров -</br> выбери свой эксклюзивный дизайн!</span>
 
-				<div class="siteHeader__account" style="display:none;">
+				<div class="siteHeader__account">
 
 					<img src="images/user.svg">
 					<div class="siteHeader__account-content">
@@ -70,16 +68,18 @@
 						</label>
 
 						<div class="siteHeader__account-autorization">
-							<div class="autorization">
+							<form class="autorization">
 								<span class="autorization--upTringle"></span>
 								<div class="autorization-head">Вход в личный кабинет</div>
-								<div data-style="inputText">
-									<input id="autorization-nickName" type="text">
-									<label for="autorization-nickName">E-mail</label>
-								</div>
-								<div data-style="inputText">
-									<input id="autorization-password" type="text">
-									<label for="autorization-password">Пароль</label>
+								<div class="autorization__inputs">
+									<label data-style="InputForText">
+										<input placeholder="info@yandex.ru" type="email">
+										<span>E-mail</span>
+									</label>
+									<label data-style="InputForText">
+										<input placeholder="qwerty123" type="password">
+										<span>Пароль</span>
+									</label>
 								</div>
 								<div class="autorization__buttons">
 									<div class="autorization__buttonsContainer">
@@ -88,7 +88,7 @@
 												<span>Зарегистрироваться</span>
 											</button>
 										</div>
-							
+
 										<div data-style="button" class="data-style-button-autorization">
 											<button>
 												<span>Войти</span>
@@ -99,7 +99,7 @@
 								<div class="autorization-getPass">
 									<a href="">Забыли пароль?</a>
 								</div>
-							</div>
+							</form>
 						</div>
 
 					</div>
@@ -145,7 +145,7 @@
 											<span class="headerCatalog__li-text">Футболки</span>
 										</span>
 									</a>
-						
+
 									<a href="">
 										<span>
 											<svg class="headerCatalog__li-icon" viewBox="0 0 48 48">
@@ -153,7 +153,7 @@
 											</svg>
 											<span class="headerCatalog__li-text">Поло</span>
 										</span>
-						
+
 									</a>
 									<a href="">
 										<span>
@@ -162,7 +162,7 @@
 											</svg>
 											<span class="headerCatalog__li-text">Леггинсы</span>
 										</span>
-						
+
 									</a>
 									<a href="">
 										<span>
@@ -181,7 +181,7 @@
 											</svg>
 											<span class="headerCatalog__li-text">Худи</span>
 										</span>
-						
+
 									</a>
 									<a href="">
 										<span>
@@ -241,7 +241,7 @@
 											<span class="headerCatalog__li-text">Майки</span>
 										</span>
 									</a>
-						
+
 								</li>
 								<li class="headerCatalog__li">
 									<a href="">
@@ -276,7 +276,7 @@
 											<span class="headerCatalog__li-text">Майки борцовки</span>
 										</span>
 									</a>
-						
+
 								</li>
 							</ul>
 						</nav>

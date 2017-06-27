@@ -8,10 +8,9 @@ class productCard {
 
 				for (var m = 0; m < this.photos.length; m++) {
 					this.photos[m].classList.remove('productCard__miniPhotos-listItem--active');
-					console.log(this.photos[m]);
 				}
 
-				this.bigPhoto.src = event.currentTarget.querySelector('img').src;
+				this.bigPhoto.src = event.currentTarget.getAttribute('data-big-photo-src');
 				event.currentTarget.classList.add('productCard__miniPhotos-listItem--active');
 			});
 		}

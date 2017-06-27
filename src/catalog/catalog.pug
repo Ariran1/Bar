@@ -1,0 +1,57 @@
+.catalog
+  .catalog__leftBar
+    .catalog__leftBar-topInfo
+      .catalog__name Наш <span>каталог</span>
+      a.catalog__barButton.catalog__yourDesign Сделай свой дизайн
+      a.catalog__barButton.catalog__action Спартак чемпион!
+      
+    include ../elements/collections/collections.pug
+    
+  .catalog__body
+    .catalog__head
+      .catalog__breadCrumbs
+        ul.catalog__breadCrumbs-list
+          li.catalog__breadCrumbs-listItem Главная
+          li.catalog__breadCrumbs-listItem Мужская одежда
+        span Мужская одежда Исторические личности - разные
+      
+      .catalog__productType
+        svg(viewBox="0 0 48 48")
+          use
+        span Тип изделия
+        svg(viewBox="0 0 48 48")
+          use(xlink:href="#icon-arrow")
+        //- - var dropList = ['Футболки свитшоты худи']
+        include ../elements/dropList/dropList.pug
+        
+    .catalog__newProducts.newProducts
+      .newProducts__head
+        h4.newProducts__sectionName Горячие новинки
+        a.newProducts__showAll Смотреть все
+      .newProducts__container
+        .newProducts__catalogCard
+          - for ( var i = 0; i < 4; i++ )
+            include ../elements/catalogCard/catalogCard.pug
+      
+    .catalog__products.products
+      .products__container
+        .products__catalogCard
+          - for ( var i = 0; i < 16; i++ )
+            include ../elements/catalogCard/catalogCard.pug
+            
+    .catalog__division
+      span Выводить по
+      span 16
+      span 32
+      span 64
+      span 128
+    .catalog__pagination
+      span 1
+      span 2
+      span 3
+      span 4
+      span 5
+      span
+        svg
+          use#icon-arrow
+      
