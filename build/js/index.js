@@ -1001,7 +1001,6 @@
 			$('.bigPrintsCarousel-carousel').each(function(item){
 
 				$(this).owlCarousel({
-												loop:true,
 									      navText:[arrow,arrow],
 												responsive: {
 													0:{

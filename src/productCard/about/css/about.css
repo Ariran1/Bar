@@ -102,7 +102,7 @@ input[name='productCard__about-show'] {
   font-weight:bold;
   transition: all .2s ease;
 }
-#productCard__about-show3:checked ~ .productCard__about-preferencesContainer .productCard__aboutProduct {
+#productCard__about-show3:checked ~ .productCard__about-preferencesContainer .productCard__opt {
   display: block;
 }
 
@@ -175,5 +175,55 @@ input[name='productCard__about-show'] {
 
   &:hover {
     display: block;
+  }
+}
+.productCard__about-guaranteeList {
+  color:#4f4f4f;
+  vertical-align: middle;
+  padding: 16px;
+
+  & svg {
+    fill:#bdbdbd;
+    vertical-align: middle;
+    padding: 0 12px 0 0;
+    width:48px;
+    height:48px;
+  }
+}
+.productCard__opt {
+  text-align: center;
+  color: #4f4f4f;
+  & p:nth-of-type(1) {
+    font-size: 1.2em;
+  }
+  & p+p {
+    padding: 16px 0;
+    font-size: 0.875em;
+  }
+
+  & button {
+    padding: 8px;
+    background: #0054a6;
+    color: #fff;
+    font: inherit;
+    border: none;
+    width: 65%;
+    border-radius: 3px;
+    height: 48px;
+    margin-bottom: 16px;
+  }
+
+  & div {
+    font-size: 0.875em;
+  }
+}
+.productCard__about-optListItem {
+  width:65%;
+  padding: 8px;
+  margin: 0 auto;
+
+  & label {
+    border-color:#bdbdbd;
+    color: #0054a6;
   }
 }

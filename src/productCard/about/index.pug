@@ -33,49 +33,60 @@ div.productCard__about
             span.productCard__about-tableCell Ткань
             span.productCard__about-tableCell Футер 300мг алкоголя в крови
       div.productCard__safeGuard
-        ul.productCard__about-table
-          li.productCard__about-tableRow
-            span.productCard__about-tableCell Esdfsdf<br> изделия
-            span.productCard__about-tableCell Карманы, капюшон, сетка в капюшоне
+        ul.productCard__about-guarantee
+          li.productCard__about-guaranteeList
+            svg 
+              use(xlink:href="images/advantageIcons.svg#wash")
+            span Принт не выцветает даже после 300 стирок
+          li.productCard__about-guaranteeList
+            svg 
+              use(xlink:href="images/advantageIcons.svg#shield")
+            span Легкий обмен и возврат в течение 7 дней
+          li.productCard__about-guaranteeList
+            svg 
+              use(xlink:href="images/advantageIcons.svg#like")
+            span Полный возврат, если вы не получили товар
+          li.productCard__about-guaranteeList
+            svg 
+              use(xlink:href="images/advantageIcons.svg#deli")
+            span Быстрая доставка по РФ и СНГ
               
-          li.productCard__about-tableRow
-            span.productCard__about-tableCell Принт
-            span.productCard__about-tableCell Выдерживает неограниченное колличество стирок
+      div.productCard__opt
+        p Оптовые цены при заказе от 15 000 рублей
+        p Скидки до 70% / Бесплатная разработка дизайна
+        form
+          ul.productCard__about-optUl
+            
+            li.productCard__about-optListItem
+              - var inputName = 'Ваше имя';
+              - var inputPlaceholder = 'Имя';
+              include ../../elements/inputForText/index.pug
+            li.productCard__about-optListItem
+              - var inputName = 'Ваш телефон';
+              - var inputPlaceholder = '+ 7 (ХХХ) ХХХ-ХХ-ХХ';
+              include ../../elements/inputForText/index.pug
+            li.productCard__about-optListItem
+              - var inputName = 'Ваш e-mail';
+              - var inputPlaceholder = 'info@e-mail.ru';
+              include ../../elements/inputForText/index.pug
+          button Получить прайс лист
+          
+        div Оптовый отдел - 5/2 09:00-19:00
+        div 
+          a(href="tel:+74956680761") +7 (495) 668-07-61 
+          a(href="mailto:opt@myprintbar.ru") opt@myprintbar.ru
+          
               
-          li.productCard__about-tableRow
-            span.productCard__about-tableCell Качество
-            span.productCard__about-tableCell Экологичная ULTRA HD печать
-              
-          li.productCard__about-tableRow
-            span.productCard__about-tableCell Ткань
-            span.productCard__about-tableCell Футер 300мг алкоголя в крови
-              
-          li.productCard__about-tableRow
-            span.productCard__about-tableCell Состав
-            span.productCard__about-tableCell Тратил
-              
-          li.productCard__about-tableRow
-            span.productCard__about-tableCell Состав
-            span.productCard__about-tableCell Тратил
-      div.productCard__aboutProduct
-        ul.productCard__about-table
-          li.productCard__about-tableRow
-            span.productCard__about-tableCell 3452542<br> изделия
-            span.productCard__about-tableCell Карманы, капюшон, сетка в капюшоне
-              
-          li.productCard__about-tableRow
-            span.productCard__about-tableCell Принт
-            span.productCard__about-tableCell Выдерживает неограниченное колличество стирок
-              
-          li.productCard__about-tableRow
-            span.productCard__about-tableCell Качество
-            span.productCard__about-tableCell Экологичная ULTRA HD печать
-              
-          li.productCard__about-tableRow
-            span.productCard__about-tableCell Ткань
-            span.productCard__about-tableCell Футер 300мг алкоголя в крови
-              
-          li.productCard__about-tableRow
-            span.productCard__about-tableCell Состав
-            span.productCard__about-tableCell Тратил
+
+
+
+
+
+
+
+
+
+
+
+
       
