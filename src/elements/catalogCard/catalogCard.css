@@ -36,6 +36,11 @@
 	color: #4f4f4f;
 	line-height: 1.5em;
 }
+@media (max-width:500) {
+	.catalogCard__price {
+		font-size: .9em;
+	}
+}
 .catalogCard__price-before {
 	font-size: .8em;
 	text-decoration: line-through;

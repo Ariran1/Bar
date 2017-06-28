@@ -231,6 +231,16 @@ a {
     fill:currentColor !important;
   }
 }
+div .productCard__printOnOtherClothes-actionCard {
+  display: block;
+  border-radius: 3px;
+  margin: 3px 13px;
+  color: #fff;
+  padding: 2px 2px;
+  background: orange;
+  font-size: 1.125em;
+  font-weight: bold;
+}
 .productCard__right .productCard__printOnOtherClothes {
   display: none;
 }
@@ -294,7 +304,7 @@ a {
 
 .productCard__about + ul {
 	font-size: 0;
-	padding: 32px 0;
+	padding: 32px 0 0;
 }
 .productCard .sc-about-product__item:nth-of-type(1) {
 	display: inline-block;
@@ -326,10 +336,16 @@ a {
  display: inline-block;
 }
 @media (max-width:550px) {
-	.productCard .sc-about-product__item:nth-of-type(1) {
+  .productCard .sc-about-product__item:nth-of-type(1) {
 		display: block;
 		width: auto;
+    padding: 10px;
+    text-align: center;
+    width: auto;
 	}
+  .productCard .sc-about-product__item:nth-of-type(1) .sc-about-product__text{
+    text-align: center;
+  }
 	.productCard .sc-about-product__item:nth-of-type(2) {
 		display: block;
 		width: 100%;
@@ -339,7 +355,13 @@ a {
 	.productCard .sc-about-product__item:nth-of-type(1) {
 		display: block;
 		width: auto;
+    padding: 10px;
+    text-align: center;
+    width: auto;
 	}
+  .productCard .sc-about-product__item:nth-of-type(1) .sc-about-product__text{
+    text-align: center;
+  }
 	.productCard .sc-about-product__item:nth-of-type(2) {
 		display: block;
 		width: 100%;
@@ -354,4 +376,10 @@ a {
 		width: 100%;
 		padding: 8px;
 	}
+}
+@media (max-width:1000px) {
+	.productCard__about + ul {
+		font-size: 0;
+		padding: 32px 2.5% 10px;
+  }
 }
