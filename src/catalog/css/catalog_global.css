@@ -3,7 +3,12 @@
   width:1200px;
   position: relative;
   margin: 0 auto;
-
+}
+.catalog__body{
+  display: flex;
+}
+.catalog__head {
+  display: flex;
 }
 .catalog__leftBar {
   width: 16.666%;
@@ -15,7 +20,9 @@
 .catalog__name {
   font-family: 'BebasNeue';
   font-size: 32px;
-  padding: 16px 0;
+  padding: 16px 10px;
+  width: 16.666%;
+  box-sizing: border-box;
 
   & span {
     color:#0054a6;
@@ -39,4 +46,73 @@
   &.catalog__action {
     color:#ff0037;
   }
+}
+
+.catalog__catalogList {
+  width:83.333%;
+}
+.catalog__breadCrumbs {
+  width: 33.333%;
+  padding: 16px 10px;
+  box-sizing: border-box;
+}
+.catalog__breadCrumbs-list {
+  font-size: 0;
+}
+.catalog__breadCrumbs-listItem {
+  font-size: 12px;
+  color: #0054a6;
+  display: inline-block;
+  &:after {
+    content: '/';
+    padding: 0 4px;
+    color: #bdbdbd;
+  }
+}
+.catalog__breadCrumbs-position {
+  font-size: 16px;
+  color:#bdbdbd;
+}
+.catalog__headButtons {
+  padding: 8px 0px;
+  width:50%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-end;
+}
+.catalog__headButton {
+  height:48px;
+  white-space: nowrap;
+  box-sizing: border-box;
+  box-shadow: 0 0 2px rgba(0, 0, 0, .15);
+  position: relative;
+  text-align: center;
+  margin: 0 10px;
+
+  & > span {
+    min-width: 120px;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 48px;
+  }
+  & > svg {
+    width:32px;
+    height:32px;
+    box-sizing: border-box;
+    padding: 10px;
+    vertical-align: middle;
+  }
+}
+
+
+
+
+
+
+.catalog .catalogCard {
+  width:23%;
+  margin:1%;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 1rem;
 }

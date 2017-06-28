@@ -1,0 +1,18 @@
+.newProducts__head {
+  color:#ff0037;
+  border-bottom: 1px solid currentColor;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.newProducts__sectionName {
+  font-size: 18px;
+
+}
+.newProducts__showAll {
+  font-size: 14px;
+  color:#0054a6;
+}
+.newProducts__catalogCard{
+  font-size: 0;
+}

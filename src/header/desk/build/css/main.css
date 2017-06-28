@@ -29,11 +29,19 @@
 	  transition: all .2s ease;
 	}
 
-	[data-style="InputForText"] span.InputForText--error{
-	  bottom: 0;
-	  transform: translateY(20%);
-	  color: #ff0037;
-	  order: 3;
+	[data-style="InputForText"] .InputForText--error {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 0;
+		display: block;
+	}
+	[data-style="InputForText"] .InputForText--error span{
+		bottom: 0;
+		transform: translateY(-60%);
+		color: #ff0037;
+		order: 3;
 	}
 	[data-style="InputForText"] input {
 	  display: block;
@@ -48,9 +56,10 @@
 	  order:2;
 	  transition: all .2s ease;
 	}
-	[data-style="InputForText"] input:focus ~ span {
+	[data-style="InputForText"] input:focus + span {
 	  margin-top: -18px;
 	}
+
 	[data-style="InputForText"] input:focus {
 	  font-size: 22px;
 	  font-weight: bold;
@@ -61,10 +70,9 @@
 	[data-style="InputForText"] input::placeholder {
 	  color:#bdbdbd;
 	  transition: color .2s ease;
+		font-weight: 400;
 	}
-	[data-style="InputForText"] input:focus::placeholder {
-	  color:#666;
-	}
+
 	.autorization [data-style="InputForText"] {
 		color:#0054a6;
 		margin: 10px 0;

@@ -10,7 +10,7 @@ class productCard {
 					this.photos[m].classList.remove('productCard__miniPhotos-listItem--active');
 				}
 
-				this.bigPhoto.src = event.currentTarget.getAttribute('data-big-photo-src');
+				this.bigPhoto.src = event.currentTarget.querySelector('img').getAttribute('data-big-photo-src');
 				event.currentTarget.classList.add('productCard__miniPhotos-listItem--active');
 			});
 		}

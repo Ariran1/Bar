@@ -1,57 +1,90 @@
 .catalog
-  .catalog__leftBar
-    .catalog__leftBar-topInfo
-      .catalog__name Наш <span>каталог</span>
-      a.catalog__barButton.catalog__yourDesign Сделай свой дизайн
-      a.catalog__barButton.catalog__action Спартак чемпион!
+  .catalog__head.clearFix
+    .catalog__name Наш <span>каталог</span>
+    .catalog__breadCrumbs
+      ul.catalog__breadCrumbs-list
+        li.catalog__breadCrumbs-listItem 
+          a Главная
+        li.catalog__breadCrumbs-listItem 
+          a Мужская одежда
+      span.catalog__breadCrumbs-position Мужская одежда Исторические личности - разные
       
-    include ../elements/collections/collections.pug
-    
-  .catalog__body
-    .catalog__head
-      .catalog__breadCrumbs
-        ul.catalog__breadCrumbs-list
-          li.catalog__breadCrumbs-listItem Главная
-          li.catalog__breadCrumbs-listItem Мужская одежда
-        span Мужская одежда Исторические личности - разные
-      
-      .catalog__productType
+    .catalog__headButtons
+      .catalog__productType.catalog__headButton(data-droplist-container)
         svg(viewBox="0 0 48 48")
           use
         span Тип изделия
-        svg(viewBox="0 0 48 48")
+        svg.catalog__headButton-arrow(viewBox="0 0 48 48")
           use(xlink:href="#icon-arrow")
-        //- - var dropList = ['Футболки свитшоты худи']
-        include ../elements/dropList/dropList.pug
-        
-    .catalog__newProducts.newProducts
-      .newProducts__head
-        h4.newProducts__sectionName Горячие новинки
-        a.newProducts__showAll Смотреть все
-      .newProducts__container
-        .newProducts__catalogCard
-          - for ( var i = 0; i < 4; i++ )
-            include ../elements/catalogCard/catalogCard.pug
+        - var dropList = ['Футболки',' свитшоты',' худи'];
+        div(data-style="dropList")
+          ul
+            each item in dropList 
+              li
+                a= item
       
-    .catalog__products.products
-      .products__container
-        .products__catalogCard
-          - for ( var i = 0; i < 16; i++ )
-            include ../elements/catalogCard/catalogCard.pug
-            
-    .catalog__division
-      span Выводить по
-      span 16
-      span 32
-      span 64
-      span 128
-    .catalog__pagination
-      span 1
-      span 2
-      span 3
-      span 4
-      span 5
-      span
-        svg
-          use#icon-arrow
+      .catalog__gender.catalog__headButton(data-droplist-container)
+        svg(viewBox="0 0 48 48")
+          use
+        span Тип изделия
+        - var dropList = ['Футболки',' свитшоты',' худи'];
+        div(data-style="dropList")
+          ul
+            each item in dropList 
+              li
+                a= item
+        svg.catalog__headButton-arrow(viewBox="0 0 48 48")
+          use(xlink:href="#icon-arrow")
+        
+        
+        
+      .catalog__sort.catalog__headButton(data-droplist-container)
+        span Тип изделия
+        svg.catalog__headButton-arrow(viewBox="0 0 48 48")
+          use(xlink:href="#icon-arrow")
+  
+  
+  .catalog__body
+  
+    
+    .catalog__leftBar
+      .catalog__leftBar-topInfo
+        a.catalog__barButton.catalog__yourDesign Сделай свой дизайн
+        a.catalog__barButton.catalog__action Спартак чемпион!
+        
+      include ../elements/collections/collections.pug
+    
+        
+    .catalog__catalogList
+        
+      .catalog__newProducts.newProducts
+        .newProducts__head
+          h4.newProducts__sectionName Горячие новинки
+          a.newProducts__showAll Смотреть все
+        .newProducts__container
+          .newProducts__catalogCard
+            - for ( var i = 0; i < 4; i++ )
+              include ../elements/newCatalogCard/catalogCard.pug
+        
+      .catalog__products.products
+        .products__container
+          .products__catalogCard
+            - for ( var i = 0; i < 16; i++ )
+              include ../elements/newCatalogCard/catalogCard.pug
+              
+      .catalog__division
+        span Выводить по
+        span 16
+        span 32
+        span 64
+        span 128
+      .catalog__pagination
+        span 1
+        span 2
+        span 3
+        span 4
+        span 5
+        span
+          svg
+            use#icon-arrow
       
