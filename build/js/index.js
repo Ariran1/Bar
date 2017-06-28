@@ -321,7 +321,7 @@
 			.then((data)=>{
 				// если при загрузке коментов, коментов нет, то окно для оставления комента открыто.
 
-				if (data.items.length === 0) {
+				if (!data.items || data.items.length === 0) {
 
 					this.comments.content = `<div class="productCard__comment-none" style=" text-align: center; padding: 30px;">
 	              <img src="images/noneReviews.svg" style=" height: 125px;display:inline-block;">
@@ -871,6 +871,8 @@
 					}
 
 					this.bigPhoto.src = event.currentTarget.querySelector('img').getAttribute('data-big-photo-src');
+					let hrefForDownload = event.currentTarget.querySelector('img').getAttribute('data-big-photo-download-href') || alert('Оригинала нет');
+					let a = document.querySelector('.productCard-download').setAttribute('href',hrefForDownload);
 					event.currentTarget.classList.add('productCard__miniPhotos-listItem--active');
 				});
 			}
@@ -878,7 +880,11 @@
 	}
 
 	document.addEventListener('DOMContentLoaded',()=>{
-	  new productCard();
+	  try {
+			new productCard();
+		} catch(e) {
+			console.error('Не отрабатывает скрипт карточки товара.');
+		}
 	});
 
 

@@ -96,7 +96,7 @@ input[name='productCard__about-show'] {
 }
 #productCard__about-show3:checked ~ .productCard__about-preferencesContainer .productCard__about-tringleBefore,
 #productCard__about-show3:checked ~ .productCard__about-preferencesContainer .productCard__about-tringleAfter {
-  left:85%;
+  left:88%;
 }
 #productCard__about-show3:checked ~ .productCard__about-togglers label:nth-of-type(3) {
   font-weight:bold;

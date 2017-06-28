@@ -11,6 +11,8 @@ class productCard {
 				}
 
 				this.bigPhoto.src = event.currentTarget.querySelector('img').getAttribute('data-big-photo-src');
+				let hrefForDownload = event.currentTarget.querySelector('img').getAttribute('data-big-photo-download-href') || alert('Оригинала нет');
+				let a = document.querySelector('.productCard-download').setAttribute('href',hrefForDownload);
 				event.currentTarget.classList.add('productCard__miniPhotos-listItem--active');
 			});
 		}
@@ -18,5 +20,9 @@ class productCard {
 }
 
 document.addEventListener('DOMContentLoaded',()=>{
-  new productCard();
+  try {
+		new productCard();
+	} catch(e) {
+		console.error('Не отрабатывает скрипт карточки товара.');
+	}
 });

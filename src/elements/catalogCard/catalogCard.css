@@ -33,8 +33,16 @@
 .catalogCard__price {
 	font-weight: 400;
 	letter-spacing: -.02em;
-	color: #000;
+	color: #4f4f4f;
 	line-height: 1.5em;
+}
+.catalogCard__price-before {
+	font-size: .8em;
+	text-decoration: line-through;
+	padding-left: 6px;
+}
+.catalogCard__price-after {
+	font-weight: bold;
 }
 .catalogCard__description {
 	font-weight: 400;

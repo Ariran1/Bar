@@ -8,9 +8,9 @@
   margin: 16px 0;
 }
 .productCard__buyBlock-action {
-  font-weight: bold;
   font-size: 0.875em;
   text-align: center;
+  margin: 0 1.666%;
 }
 .productCard__buyBlock-action > span {
   display: inline-block;
@@ -18,6 +18,14 @@
   border-radius: 0 0 100px 100px;
   background: #ff9333;
   color:#fff;
+  max-width: 300px;
+  box-sizing: border-box ;
+}
+@media (max-width:400px) {
+  .productCard__buyBlock-action > span {
+    max-width: 100%;
+    box-sizing: border-box ;
+  }
 }
 .productCard-productName {
   padding: 16px 20px 2px;
