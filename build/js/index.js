@@ -389,10 +389,13 @@
 
 			// отправка сообщения
 
-			let req = new XMLHttpRequest();
-			let sendData = '';
+			// let req = new XMLHttpRequest();
+			// let sendData = '';
+			// let POST_href = window.location.pathname + '?link=comments&action=save';
+			// req.open( 'POST', POST_href, true);
+
+			let data = [];
 			let POST_href = window.location.pathname + '?link=comments&action=save';
-			req.open( 'POST', POST_href, true);
 
 			this.inputPhoto = this.element.querySelector('[type="file"]');
 			this.photo = new Promise((resolve,reject) => {
@@ -405,7 +408,10 @@
 						let file = event.target.result;
 
 						if (file) {
-							sendData += '&image=' + encodeURIComponent(file);
+							// sendData += '&image=' + encodeURIComponent(file);
+							// resolve();
+
+							data.push({name: 'image', value: file});
 							resolve();
 						}
 
@@ -432,7 +438,8 @@
 			this.name = new Promise((resolve,reject) => {
 				this.nameInput = this.element.querySelector('.productCard__commentConstructor-name input');
 				if (this.nameInput.value) {
-					sendData += '&name=' + encodeURIComponent(this.nameInput.value);
+					// sendData += '&name=' + encodeURIComponent(this.nameInput.value);
+					data.push({name: 'name', value: this.nameInput.value});
 					resolve();
 				}
 				else {
@@ -456,7 +463,8 @@
 			this.mail = new Promise((resolve,reject) => {
 				this.mailInput = this.element.querySelector('.productCard__commentConstructor-mail input');
 				if (this.mailInput.value) {
-					sendData += '&mail=' + encodeURIComponent(this.mailInput.value);
+					// sendData += '&mail=' + encodeURIComponent(this.mailInput.value);
+					data.push({name: 'mail', value: this.mailInput.value});
 					resolve();
 				}
 				else {
@@ -481,7 +489,8 @@
 			this.stars = new Promise((resolve,reject) => {
 				let stars = this.element.querySelector('[name="stars__daszcDD"]:checked').value;
 				if (stars) {
-					sendData += '&mark=' + encodeURIComponent(stars);
+					// sendData += '&mark=' + encodeURIComponent(stars);
+					data.push({name: 'mark', value: stars});
 					resolve();
 				}
 				else {
@@ -500,7 +509,8 @@
 			this.text = new Promise((resolve,reject) => {
 				this.textarea = this.element.querySelector('.productCard__commentConstructor-text textarea');
 				if (this.textarea.value) {
-					sendData += '&text=' + encodeURIComponent(this.textarea.value);
+					// sendData += '&text=' + encodeURIComponent(this.textarea.value);
+					data.push({name: 'text', value: this.textarea.value});
 					resolve();
 				}
 				else {
