@@ -20,11 +20,12 @@
     cursor: default;
     transition: box-shadow .2s ease;
   }
+  .advantages__cards-item:hover .advantages__cards-text,
+  .advantages__cards-item--active .advantages__cards-text {
+    font-weight: bold;
+  }
 }
-.advantages__cards-item:hover .advantages__cards-text,
-.advantages__cards-item--active .advantages__cards-text {
-  font-weight: bold;
-}
+
 .advantages__cards-moreInfo:hover {
   cursor: pointer;
 }
@@ -37,4 +38,5 @@
   .advantages__cards-item .advantages__cards-moreInfo {
       visibility: hidden !important;
   }
+
 }
