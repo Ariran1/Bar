@@ -1,6 +1,6 @@
 require('./productCard/reviews/index.js');
 require('./productCard/js/productCard.js');
-require('./elements/dropList/dropList.js');
+// require('./elements/dropList/dropList.js');
 require('./elements/pigPrintsCarousel/pigPrintsCarousel.js');
 require('./advantages/index.js');
 
