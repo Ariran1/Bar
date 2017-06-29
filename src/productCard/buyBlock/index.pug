@@ -12,7 +12,13 @@ div.productCard__buyBlock(data-counter)
   div.productCard__buyPreferences
     span.productCard__buyPreferences-item.productCard__buyPreferences-size(data-droplist-container)
       - var dropList = ['XS (44)','S (46)','M (48)','L (50)','XL (52)','XXL (54)','3XL (56)'];
-      include ../../elements/dropList/dropList.pug
+      div(data-style="dropList")
+        ul
+          each item in dropList 
+            li= item
+       
+          li.sizeGrid Размерная сетка
+
       span(data-dropList-result) Выберите размер
       svg(viewBox="0 0 48 48")
         use(xlink:href="#icon-arrow")
