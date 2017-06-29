@@ -97,8 +97,8 @@
         label.advantages__cards-item(for='showBlock__' + names[count++])
           span.advantages__cards-moreInfo Подробнее
           .advantages__cards-svgConteiner
-            svg
-              use(xlink:href='images/advantageIcons.svg#' + item.photoName)
+            svg(viewBox="0 0 48 48")
+              use(xlink:href='#icon-' + item.photoName)
           p.advantages__cards-text #{item.text}
       
       
