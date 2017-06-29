@@ -36,10 +36,10 @@ class productCard {
 		new Click({
 			parent:this,
 			callback: function(event){
-				this.dropLists = document.querySelectorAll('[data-style="dropList"]');
+				var dropLists = document.querySelectorAll('[data-style="dropList"]');
 				if (event.target.closest('[data-droplist-container]')) return;
-				for (var i = 0; i < this.dropLists.length; i++) {
-					this.dropLists[i].style.display = 'none';
+				for (var i = 0; i < dropLists.length; i++) {
+					dropLists[i].style.display = 'none';
 				}
 			}
 		});
