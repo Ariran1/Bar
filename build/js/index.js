@@ -903,6 +903,8 @@
 					}
 				}
 			});
+
+			this.setOrangeColorForAction();
 		}
 
 		toggleDropList(event) {
@@ -935,6 +937,21 @@
 			} else {
 				element.style.display = 'none';
 			}
+		}
+
+		setOrangeColorForAction() {
+
+	    window.addEventListener('scroll',setOrange);
+
+	    function setOrange(){
+				let elements = document.querySelectorAll('.productCard__mobileCarouselAndBuyBlock,.productCard__buyBlock');
+				for (var i = 0; i < elements.length; i++) {
+					if (!elements) continue;
+					elements[i].classList.add('orange');
+				}
+	        this.removeEventListener('scroll',setOrange);
+	    }
+
 		}
 	}
 

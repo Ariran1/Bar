@@ -79,9 +79,14 @@
   }
   .productCard__mobileCarouselAndBuyBlock {
     display: block;
-    border:1px solid orange;
+    border:1px solid #bdbdbd;
     border-radius: 3px;
     margin-bottom: 16px;
+    transition: border-color .15s linear .2s;
+    
+    &.orange {
+      border:1px solid orange;
+    }
   }
   .productCard__buyBlock {
     border:none;

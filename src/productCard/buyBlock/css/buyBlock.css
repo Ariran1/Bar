@@ -3,23 +3,33 @@
   color:#4f4f4f;
   font:inherit;
   border-radius: 2px;
-  border:1px solid #ff9333;
+  border:1px solid #bdbdbd;
   box-sizing: border-box;
   margin: 16px 0;
+  transition: border-color .15s linear .2s;
+
+  &.orange {
+    border-color: #ff9333;
+  }
 }
 .productCard__buyBlock-action {
   font-size: 0.875em;
   text-align: center;
   margin: 0 8px;
 }
+.orange .productCard__buyBlock-action > span {
+  background: #ff9333;
+}
 .productCard__buyBlock-action > span {
   display: inline-block;
   padding: 6px 48px;
   border-radius: 0 0 100px 100px;
-  background: #ff9333;
+  background: #bdbdbd;
   color:#fff;
   max-width: 100%;
   box-sizing: border-box ;
+  transition: background-color .15s linear .2s;
+
 }
 @media (max-width:400px) {
   .productCard__buyBlock-action > span {
