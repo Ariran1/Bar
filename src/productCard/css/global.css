@@ -20,6 +20,10 @@ a {
     width:100%;
   }
 }
+input:disabled,
+textarea:disabled {
+  background: transparent;
+}
 /*@media (max-width:400px) {
   .productCard {
     font-size: 8px;
