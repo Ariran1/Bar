@@ -195,8 +195,12 @@ a {
   text-align: center;
   padding: 16px;
 }
+.owl-item .productCard__printOnOtherClothes-carouselItem {
+  display: block;
+}
 .productCard__printOnOtherClothes-carouselItem {
   text-align: center;
+  display: none;
 
   & a {
     text-align: center;
@@ -246,20 +250,20 @@ div .productCard__printOnOtherClothes-actionCard {
 }
 .productCard__printOnOtherClothes-carousel {
   position: relative;
-  display: none;
   &.owl-loaded {
     display: block;
   }
 }
-.owl-stage-outer {
+.productCard .owl-stage-outer {
   overflow: hidden;
 }
-.owl-stage {
+.productCard .owl-stage {
   display: flex;
   justify-content: flex-start;
+  margin: 0 auto;
 }
-.owl-prev,
-.owl-next {
+.productCard .owl-prev,
+.productCard .owl-next {
   & svg {
     fill: #828282;
     width:inherit;
@@ -267,7 +271,7 @@ div .productCard__printOnOtherClothes-actionCard {
     box-sizing: border-box;
   }
 }
-.owl-prev {
+.productCard .owl-prev {
   & svg {
     transform: rotate(180deg);
   }
@@ -375,6 +379,7 @@ div .productCard__printOnOtherClothes-actionCard {
 		text-align: center;
 		width: 100%;
 		padding: 8px;
+    box-sizing: border-box ;
 	}
 }
 @media (max-width:1000px) {

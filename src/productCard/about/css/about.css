@@ -181,6 +181,8 @@ input[name='productCard__about-show'] {
   color:#4f4f4f;
   vertical-align: middle;
   padding: 16px;
+  display: flex;
+  align-items: center;
 
   & svg {
     fill:#bdbdbd;

@@ -46,7 +46,7 @@
 
 	__webpack_require__(1);
 	__webpack_require__(3);
-	__webpack_require__(4);
+	__webpack_require__(5);
 	__webpack_require__(6);
 	__webpack_require__(8);
 
@@ -856,7 +856,10 @@
 
 /***/ }),
 /* 3 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	var Click = __webpack_require__(4);
 
 	class productCard {
 		constructor(options) {
@@ -876,29 +879,9 @@
 					event.currentTarget.classList.add('productCard__miniPhotos-listItem--active');
 				});
 			}
-		}
-	}
-
-	document.addEventListener('DOMContentLoaded',()=>{
-	  try {
-			new productCard();
-		} catch(e) {
-			console.error('Не отрабатывает скрипт карточки товара.');
-		}
-	});
 
 
-/***/ }),
-/* 4 */
-/***/ (function(module, exports, __webpack_require__) {
 
-	'use strict';
-
-	var Click = __webpack_require__(5);
-
-	console.log(Click,'click');
-	class dropList {
-		constructor() {
 			this.lists = document.querySelectorAll('[data-droplist-container]');
 
 			for (var i = 0; i < this.lists.length; i++) {
@@ -930,12 +913,21 @@
 				let clickOpen = new Click({
 					element:element.querySelector('ul'),
 					callback:function(event) {
+
 						let content = event.target.closest('li');
+
 						if (!content) {
 							this.end();
 							return;
 						}
-						event.currentTarget.closest('span').querySelector('[data-droplist-result]').innerHTML = content.innerHTML;
+
+						let result = event.currentTarget.closest('span').querySelector('[data-droplist-result]');
+						result.innerHTML = content.innerHTML;
+						let attributs = result.dataset;
+
+						for (var item in attributs) {
+							alert(item);
+						}
 						this.end();
 					}
 				});
@@ -944,21 +936,19 @@
 				element.style.display = 'none';
 			}
 		}
-
-
 	}
 
 	document.addEventListener('DOMContentLoaded',()=>{
-		try {
-			new dropList();
-		} catch (err) {
-			console.log(err);
+	  try {
+			new productCard();
+		} catch(e) {
+			console.error('Не отрабатывает скрипт карточки товара.');
 		}
 	});
 
 
 /***/ }),
-/* 5 */
+/* 4 */
 /***/ (function(module, exports) {
 
 	module.exports = class click {
@@ -978,6 +968,13 @@
 			this.element.removeEventListener('click',this.callback);
 		}
 	}
+
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports) {
+
+	'use strict';
 
 
 /***/ }),

@@ -10,7 +10,7 @@
 .productCard__buyBlock-action {
   font-size: 0.875em;
   text-align: center;
-  margin: 0 1.666%;
+  margin: 0 8px;
 }
 .productCard__buyBlock-action > span {
   display: inline-block;
