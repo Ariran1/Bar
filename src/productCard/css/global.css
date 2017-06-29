@@ -160,10 +160,15 @@ a {
   &--disabled {
     opacity: .3;
     cursor: default;
+
+    &:hover {
+      opacity: .3;
+    }
   }
   &:hover {
     opacity: .8;
   }
+
 }
 
 .productCard-saleSticker {
@@ -340,14 +345,15 @@ div .productCard__printOnOtherClothes-actionCard {
 	display: inline-block;
 }
 .productCard .sc-about-product__item:nth-of-type(2) .country-select+div {
- line-height: 22px;
+ line-height: 20px;
  display: inline-block;
+ overflow: hidden;
 }
 @media (max-width:550px) {
   .productCard .sc-about-product__item:nth-of-type(1) {
 		display: block;
 		width: auto;
-    padding: 10px;
+    padding:0 10px 10px;
     text-align: center;
     width: auto;
 	}
@@ -363,7 +369,7 @@ div .productCard__printOnOtherClothes-actionCard {
 	.productCard .sc-about-product__item:nth-of-type(1) {
 		display: block;
 		width: auto;
-    padding: 10px;
+    padding: 0 10px 10px;
     text-align: center;
     width: auto;
 	}

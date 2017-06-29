@@ -177,6 +177,12 @@ input[name='productCard__about-show'] {
     display: block;
   }
 }
+@media (max-width:600px) {
+  
+  .tooltip-inner {
+    width:280px;
+  }
+}
 .productCard__about-guaranteeList {
   color:#4f4f4f;
   vertical-align: middle;
@@ -212,7 +218,7 @@ input[name='productCard__about-show'] {
     width: 65%;
     border-radius: 3px;
     height: 48px;
-    margin-bottom: 16px;
+    margin:8px 0 16px;
   }
 
   & div {
@@ -227,5 +233,10 @@ input[name='productCard__about-show'] {
   & label {
     border-color:#bdbdbd;
     color: #0054a6;
+  }
+}
+@media (max-width:1000px) {
+  .productCard__about-optListItem {
+    width:80%;
   }
 }
