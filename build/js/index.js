@@ -578,19 +578,18 @@
 
 		showNO(parent,promStat) {
 			// startCoordClass это css с изначальным положением картинки
-			return this.__shake(parent).then(()=> promStat(new Error('Не вышло')));
+			return this.setRed(parent).then(()=> promStat(new Error('Не вышло')));
 
 		}
 
-		__shake(parent) {
+		setRed(parent) {
 			return new Promise((resolve,reject)=>{
 				let a = Math.random();
-				let anims = 'shake';
-				parent.classList.add(anims);
+				parent.classList.add('red--error');
 
 				setTimeout(()=>{
 					resolve();
-					parent.classList.remove(anims);
+					parent.classList.remove('red--error');
 
 				},(this.timing + Math.random() * 2 * this.timingDelay));
 			});

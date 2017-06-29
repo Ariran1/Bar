@@ -25,15 +25,14 @@ input[name="showBlockAdvantages"]:nth-of-type(6):checked ~ .advantages__infoBloc
 
 
 }
+input[name="showBlockAdvantages"]:checked ~ .advantages__cardsContainer {
+  box-shadow: 0 4px 64px rgba(0,0,0,0.15)
+}
 .advantages__cardsContainer {
   position: relative;
   z-index: 9;
   transition:all .2s ease;
   background: #f2f2f2;
-
-  &--active {
-    box-shadow: 0 4px 64px rgba(0,0,0,0.15)
-  }
 }
 .advantages__infoBlocks-item {
 
