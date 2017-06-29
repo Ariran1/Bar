@@ -157,6 +157,9 @@ input[name='productCard__about-show'] {
     padding: 2.5%;
   }
 }
+.tooltips--info {
+  color:#0054a6;
+}
 .ico_info:hover ~ .tooltip-inner  {
   display: block;
 }
@@ -178,7 +181,7 @@ input[name='productCard__about-show'] {
   }
 }
 @media (max-width:600px) {
-  
+
   .tooltip-inner {
     width:280px;
   }

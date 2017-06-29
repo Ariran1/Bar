@@ -110,6 +110,20 @@ a {
   justify-content: center;
   align-items: center;
 }
+.productCard__imageContainer-ar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  box-sizing: border-box;
+  width: 100%;
+  display: block;
+  height: 92px;
+  text-align: center;
+  background: url(../images/AR.png) no-repeat center bottom;
+  background-size: contain;
+}
 .productCard-bigImage {
   min-width: 50%;
   max-width:100%;
