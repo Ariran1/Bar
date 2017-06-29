@@ -923,10 +923,10 @@
 
 						let result = event.currentTarget.closest('span').querySelector('[data-droplist-result]');
 						result.innerHTML = content.innerHTML;
-						let attributs = result.dataset;
+						let attributs = content.dataset;
 
 						for (var item in attributs) {
-							alert(item);
+							result.dataset[item] = content.dataset[item];
 						}
 						this.end();
 					}
