@@ -976,7 +976,8 @@
 		}
 
 		setOrangeColorForAction() {
-
+			let actionElement = document.querySelector('.productCard__buyBlock-action');
+			if (!actionElement) return;
 	    window.addEventListener('scroll',setOrange);
 
 	    function setOrange(){

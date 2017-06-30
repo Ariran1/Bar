@@ -328,8 +328,15 @@ div .productCard__printOnOtherClothes-actionCard {
 .productCard__imageContainer-carouselContainer {
   display: none;
 }
-
-
+.productCard__imageContainer-carousel img {
+  width:100%;
+}
+.productCard__imageContainer-carousel img:nth-of-type(n+2) {
+  display: none;
+}
+.productCard__imageContainer-carousel.owl-loaded img {
+  display: block;
+}
 /* ДОСТАВКА */
 
 .productCard__about + ul {
