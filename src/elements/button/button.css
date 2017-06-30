@@ -67,12 +67,13 @@
 [data-style="button"] div:before,
 [data-style="button"] div:after {
   content:'';
+  padding: 2px;
 }
 /*Для флексов конец*/
 
 [data-style="button"] div {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
