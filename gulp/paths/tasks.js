@@ -5,5 +5,6 @@ module.exports = [
   './gulp/tasks/webpack.js',
   './gulp/tasks/watch.js',
   './gulp/tasks/serve.js',
-  './gulp/tasks/images.js'
+  './gulp/tasks/images.js',
+  './gulp/tasks/fonts.js'
 ]

@@ -1,0 +1,35 @@
+.headerCatalog {
+	line-height:5;
+	color: #828282;
+}
+.headerCatalog__ul {
+	padding:30px;
+	box-sizing: border-box;
+	display: table;
+	width: 100%;
+}
+.headerCatalog__li {
+	display: table-row;
+}
+.headerCatalog__li a {
+    white-space: nowrap;
+	display: table-cell;
+    width: 25%;
+}
+.headerCatalog__li-icon{
+	width: 48px;
+	height: 48px;
+	vertical-align: middle;
+	display: inline-block;
+	fill: rgba(0, 84, 166, 0.3);
+	padding: 0 24px;
+}
+.headerCatalog__li a:hover .headerCatalog__li-icon {
+	fill: #0054a6;
+}
+.headerCatalog__li a:hover {
+	color:black;
+}
+.headerCatalog__li-text {
+	vertical-align: middle;
+}

@@ -1,14 +1,26 @@
+- var number = (1 + Math.random() * 3).toFixed(0);
 .catalogCard
+  label.catalogCard__like
+    input(type="checkbox" name="catalogCard-like")
+    svg(viewBox="-1 -1 51 51")
+      use(xlink:href="#icon-heart")
   a.catalogCard__link( href='')
     .catalogCard__imageContainer
-      img.catalogCard__image( src='images/shirt.png', alt='')
+      if (number == 1 || number == 4)
+        img.catalogCard__image.catalogCard__image--high( src='images/product' + number + '.jpg', alt='')
+      else 
+        img.catalogCard__image( src='images/product' + number + '.jpg', alt='')
+        
       span.verticalAlignMethod
     .catalogCard__contentContainer
-      div.catalogCard__action
-      span.catalogCard__price 1 390  руб
+      .catalogCard__action
+        | До конца акции осталось
+      .catalogCard__price 
+        span.catalogCard__price-before 1 390  руб
+        span.catalogCard__price-after 999  руб
       .catalogCard__description
-        span.catalogCard__description-name(style='overflow: hidden;') Медведь
-        span.catalogCard__description-type(style='overflow: hidden;') Мужская футболка
+        .catalogCard__description-name Медведь
+        .catalogCard__description-productType Мужская футболка
   if (hoverDrop)
     .catalogCard__hoverContent
       .catalogCard__hoverContent-buttonContainer

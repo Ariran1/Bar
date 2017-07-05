@@ -1,0 +1,41 @@
+.popupchik {
+  width:380px;
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.15);
+  background: #fff;
+  text-align: center;
+  font-family: 'PT Sans';
+  border-radius: 3px;
+  font-size: 16px;
+}
+.popupchik-head {
+  font-size: 1.5em;
+  line-height: 36px;
+  padding: 14px;
+}
+.popupchik-text {
+  font-size: 1.125em;
+  padding: 12px;
+  line-height: 22px;
+}
+.popupchik-knopulka {
+  font-size: 1em;
+  line-height: 24px;
+  padding: 12px;
+  background: #0054a6;
+  border:none;
+  margin: 20px 12px 20px;
+  color:#fff;
+  border-radius: 3px;
+  min-width: 50%;
+  transition: box-shadow .2s ease;
+}
+.popupchik-knopulka:hover {
+  background: #004492;
+  box-shadow: 0 7px 10px rgba(0, 0, 0, 0.1);
+}
+@media (max-width:1000px) {
+  .popupchik {
+    width:300px;
+    font-size: 14px;
+  }
+}

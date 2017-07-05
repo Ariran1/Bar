@@ -4,9 +4,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 31px 1% .5%;
+  box-sizing: border-box;
 }
 .newProducts__sectionName {
   font-size: 18px;
+  font-weight: bold;
+  line-height: 23px;
 
 }
 .newProducts__showAll {
@@ -15,4 +19,15 @@
 }
 .newProducts__catalogCard{
   font-size: 0;
+}
+
+@media (--deskFix){
+  .newProducts__catalogCard .catalogCard:nth-of-type(4) {
+    display: none;
+  }
+}
+@media (--mobFix){
+  .newProducts__catalogCard .catalogCard:nth-of-type(3) {
+    display: none;
+  }
 }

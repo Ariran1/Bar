@@ -10,40 +10,45 @@
       span.catalog__breadCrumbs-position Мужская одежда Исторические личности - разные
       
     .catalog__headButtons
-      .catalog__productType.catalog__headButton(data-droplist-container)
-        svg(viewBox="0 0 48 48")
-          use
-        span Тип изделия
-        svg.catalog__headButton-arrow(viewBox="0 0 48 48")
-          use(xlink:href="#icon-arrow")
-        - var dropList = ['Футболки',' свитшоты',' худи'];
-        div(data-style="dropList")
-          ul
-            each item in dropList 
-              li
-                a= item
-      
-      .catalog__gender.catalog__headButton(data-droplist-container)
-        svg(viewBox="0 0 48 48")
-          use
-        span Тип изделия
-        - var dropList = ['Футболки',' свитшоты',' худи'];
-        div(data-style="dropList")
-          ul
-            each item in dropList 
-              li
-                a= item
-        svg.catalog__headButton-arrow(viewBox="0 0 48 48")
-          use(xlink:href="#icon-arrow")
-        
-        
-        
-      .catalog__sort.catalog__headButton(data-droplist-container)
-        span Тип изделия
-        svg.catalog__headButton-arrow(viewBox="0 0 48 48")
-          use(xlink:href="#icon-arrow")
-  
-  
+      .catalog__headButtons--helperForTable--tableRow
+        .catalog__headButtons--helperForTable--tableCell
+          .catalog__productType.catalog__headButton(data-droplist-container)
+            svg(viewBox="0 0 48 48")
+              use
+            span Тип изделия
+            svg.catalog__headButton-arrow(viewBox="0 0 48 48")
+              use(xlink:href="#icon-arrow")
+            - var dropList = ['Футболки',' свитшоты',' худи'];
+            div(data-style="dropList")
+              ul
+                each item in dropList 
+                  li
+                    a= item
+                    
+        .catalog__headButtons--helperForTable--tableCell
+          .catalog__gender.catalog__headButton(data-droplist-container)
+            svg(viewBox="0 0 48 48")
+              use
+            span Тип изделия
+            - var dropList = ['Футболки',' свитшоты',' худи'];
+            div(data-style="dropList")
+              ul
+                each item in dropList 
+                  li
+                    a= item
+            svg.catalog__headButton-arrow(viewBox="0 0 48 48")
+              use(xlink:href="#icon-arrow")
+            
+                
+                
+        .catalog__headButtons--helperForTable--tableCell
+          .catalog__sort.catalog__headButton(data-droplist-container)
+            span Тип изделия
+            svg.catalog__headButton-arrow(viewBox="0 0 48 48")
+              use(xlink:href="#icon-arrow")
+    
+    .catalog__topCollections
+      include ../elements/circleCollections/circleCollections.pug
   .catalog__body
   
     
@@ -51,12 +56,13 @@
       .catalog__leftBar-topInfo
         a.catalog__barButton.catalog__yourDesign Сделай свой дизайн
         a.catalog__barButton.catalog__action Спартак чемпион!
-        
+
       include ../elements/collections/collections.pug
     
         
     .catalog__catalogList
-        
+      
+      - var hoverDrop = true;  
       .catalog__newProducts.newProducts
         .newProducts__head
           h4.newProducts__sectionName Горячие новинки
@@ -67,24 +73,36 @@
               include ../elements/newCatalogCard/catalogCard.pug
         
       .catalog__products.products
+        .products__head
         .products__container
           .products__catalogCard
-            - for ( var i = 0; i < 16; i++ )
+            - for ( var i = 0; i < 24; i++ )
               include ../elements/newCatalogCard/catalogCard.pug
-              
-      .catalog__division
-        span Выводить по
-        span 16
-        span 32
-        span 64
-        span 128
-      .catalog__pagination
-        span 1
-        span 2
-        span 3
-        span 4
-        span 5
-        span
-          svg
-            use#icon-arrow
+      .catalog__controllers
+        .catalog__pagination
+          span.catalog__pagination-toggler
+            a 1
+          span.catalog__pagination-toggler
+            a 2
+          span.catalog__pagination-toggler
+            a 3
+          span.catalog__pagination-toggler.catalog__pagination-toggler--active
+            a 4
+          span.catalog__pagination-toggler
+            a 5
+          span.catalog__pagination-arrow.catalog__pagination-toggler.catalog__pagination-toggler--active
+            svg(viewBox="0 0 48 48")
+              use(xlink:href="#icon-arrow")
+        .catalog__division
+          span.catalog__division-text Выводить по
+          span.catalog__division-toggler.catalog__division-toggler--active
+            a 16
+          span.catalog__division-toggler
+            a 32
+          span.catalog__division-toggler.catalog__division-toggler--active
+            a 64
+          span.catalog__division-toggler
+            a 128
       
+      
+      - var hoverDrop = null;

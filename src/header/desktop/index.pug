@@ -1,0 +1,132 @@
+.siteHeader
+  .siteHeader__topContainer
+    p.siteHeader__siteLogo
+      a(href='') Print Bar
+    .siteHeader__aboutWork
+      .siteHeader__phone 8 (495) 268-08-28
+      .siteHeader__workTime Ежедневно: 08:00 - 24:00
+    .siteHeader__topCenter
+      ul.siteHeader__genderButtons
+        li.siteHeader__genderButton.siteHeader__genderButton--active
+          a(href='') Мужчинам
+        li.siteHeader__genderButton
+          a(href='') Женщинам
+        li.siteHeader__genderButton
+          a(href='') Детям
+    // ВСЕ ИНЛАЙНОВЫЕ СТИЛИ временные и их нужно убрать, как только выкатим личный кабинет.
+    .siteHeader__container-account(style='text-align:right;')
+      // Заглушка пока нет ЛК
+      span(style=' font-size: 13px; color: #bdbdbd; padding-right: 10px; display: block; white-space: nowrap')
+        | Крутые принты для одежды и аксессуаров -
+        br
+        |  выбери свой эксклюзивный дизайн!
+      .siteHeader__account(style='display:none;')
+        img(src='images/user.svg')
+        .siteHeader__account-content
+          .siteHeader__account-text Личный кабинет
+          input#siteHeader__account-input(type='checkbox')
+          label(for='siteHeader__account-input')
+            span.siteHeader__account-logIn Войдите
+            span /
+            span.siteHeader__account-signUp Зарегистрируйтесь
+          .siteHeader__account-autorization
+            include autorization.pug
+  .siteHeader__bottomContainer
+    .siteHeader__catalogViewer
+      input#showCatalog__aDASfgFA(type='checkbox', name='showCatalog__aDASfgFA')
+      //
+        не будет работать checked так как id не совпадает с for. устранить по надобности функции checked
+        так же тег класса siteHeader__catalogButton был заменен на div вместо label для переноса каталога внутрь
+      .siteHeader__catalogButton(for='showCatalog__aDASfgF')
+        .siteHeader__sandwich.sandwich.animation0
+          span.siteHeader__sandwich-line.sw-top
+          span.siteHeader__sandwich-line.sw-mid
+          span.siteHeader__sandwich-line.sw-bot
+        span Каталог
+        span.siteHeader__arrowDown
+          svg(width='24', height='24', viewbox='0 0 48 48', version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+            use(xlink:href='#icon-arrowDown', fill='inherit')
+        .siteHeader__catalogNav
+          include catalog.pug
+    .siteHeader__yourDesign
+      a Свой дизайн
+    .siteHeader__bottomCenter
+      form.siteHeader__searchForm
+        label.siteHeader__searchLabel
+          .siteHeader__searchIcon
+            svg(width='25', height='25', viewbox='0 0 48 48', version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+              use(xlink:href='#icon-search', fill='#828282')
+          input.siteHeader__searchInput(type='text', name='', placeholder='Поиск')
+          button.siteHeader__searchButton Найти
+    .siteHeader__container-cart
+      a.siteHeader__cart.siteHeader__cart--active
+        span.siteHeader__cart-iconContainer
+          svg(viewbox='0 0 48 48')
+            use(xlink:href='#icon-cart', fill='inherit')
+          span.siteHeader__cart-lotsProductsCount 2
+        .siteHeader__cart-text
+          span.siteHeader__cart-lotsProducts В корзине 2 товара
+          span.siteHeader__cart-cost на 3998 руб.
+link(rel='stylesheet', type='text/css', href='underHeader.css')
+.siteHeader__underHeader
+  .siteHeader__underHeader-previewAction
+  ul.siteHeader__underHeader-siteNav
+    li
+      a.sale Sale -65%
+    li |
+    li
+      a.city(href='')
+        svg(viewbox='0 0 48 48')
+          use(xlink:href='#icon-geo', fill='inherit')
+        //
+        | Москва
+    li |
+    li
+      a(href='')
+        | Магазин
+    li |
+    li
+      a(href='')
+        | Дизайнерам
+    li |
+    li
+      a(href='')
+        | Опт
+    li |
+    li
+      a(href='')
+        span.partner Партнерская программа
+        span.partner Партнерам
+    li |
+    li
+      a(href='')
+        span.likedProducts
+          svg.likedProducts__heart(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', viewbox='0 0 48 48', version='1.1')
+            use(xlink:href='#icon-likedProductsHeart', fill='inherit')
+          .likedProducts__count 20
+        span Избранное
+    li |
+    li
+      .siteHeader__underHeader-whereMyPost
+        span
+          span.siteHeader__underHeader-whereMyPost--label Где мой заказ?
+          svg(viewbox='0 0 48 48')
+            use(xlink:href='#icon-arrowDown')
+        span.verticalAlignMethod
+        ul
+          li
+            a(href='')
+              span Где мой заказ?
+          li
+            a(href='')
+              span Доставка и оплата
+          li
+            a(href='')
+              span Обмен и возврат
+          li
+            a(href='')
+              span Где мой заказ?
+          li
+            a(href='')
+              span FAQ
+      span.verticalAlignMethod

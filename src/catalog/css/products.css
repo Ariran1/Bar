@@ -1,0 +1,8 @@
+.products__head {
+  border-bottom: 1px solid var(--lightGrey);
+  margin: 1%;
+}
+
+.products__catalogCard{
+  font-size: 0;
+}

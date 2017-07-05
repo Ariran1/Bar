@@ -1,0 +1,24 @@
+.autorization-sokialnieSetochki {
+  position: relative;
+  background: #f2f2f2;
+  margin: 5px -10px -10px;
+  text-align: center;
+  font-size: 13px;
+  color:#4f4f4f;
+}
+.autorization-sokialnieSetochki-head {
+  padding: 2px;
+}
+.autorization-sokialnieSetochki-ic {
+  display: flex;
+  justify-content: space-around;
+  padding: 8px 0;
+
+}
+.autorization-sokialnieSetochki-ic:before,
+.autorization-sokialnieSetochki-ic:after {
+  content:'';
+}
+.autorization-sokialnieSetochki-ic svg {
+  display: none;
+}

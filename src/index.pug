@@ -42,8 +42,10 @@ html
     link(rel='stylesheet' href='css/style.css')
   body
     include elements/icons.html
-    //- include catalog/catalog.pug
-    include productCard/index.pug
+    
+    include header/header.pug 
+    include catalog/catalog.pug
+    //- include productCard/index.pug
     include advantages/index.pug
     
     - var bigPrintsCarouselText = 'Вы недавно смотрели';

@@ -38,8 +38,8 @@ textarea:disabled {
   align-items: stretch;
 }
 .productCard__left {
-  width: 6.666%;
-  padding: 0.833%;
+  width: 6.667%;
+  padding: 0.834%;
 }
 .productCard-back {
   font-size: 12px;
@@ -100,8 +100,8 @@ textarea:disabled {
 /* center */
 
 .productCard__center {
-  width:48.333%;
-  padding: 0.833%;
+  width:48.334%;
+  padding: 0.834%;
 }
 .productCard__imageContainer {
   box-shadow: 0 32px 64px 0 rgba(0,0,0,0.15);
@@ -211,7 +211,7 @@ textarea:disabled {
 /* =============================riht*/
 .productCard__right {
   width:40%;
-  padding: 0.833%;
+  padding: 0.834%;
 }
 .productCard__printOnOtherClothes {
   padding: 32px;

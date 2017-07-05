@@ -1,0 +1,70 @@
+// от инпута работает боковая выезжалка, меню мобилы
+.siteHeaderMobile
+  .siteHeaderMobile__visual
+    .siteHeaderMobile__visual-top
+      .siteHeaderMobile__visual-left
+        .siteHeaderMobile__button
+          // от инпута работает боковая выезжалка, он выше
+          label.siteHeaderMobile__sandwich.sandwich.animation1(for='showMenuMobile__FasXdFe')
+            span.siteHeaderMobile__sandwich-line.sw-top
+            span.siteHeaderMobile__sandwich-line.sw-mid
+            span.siteHeaderMobile__sandwich-line.sw-bot
+        p.siteHeaderMobile__logo
+          a(href='/') Print Bar
+      ul.siteHeaderMobile__visualNav
+        li.siteHeaderMobile__visualNav-phone
+          a(href='tel:+74952680828')
+            svg(viewbox='0 0 48 48')
+              use(xlink:href='#icon-phone')
+        li.siteHeaderMobile__visualNav-account
+          div
+            svg(viewbox='0 0 48 48')
+              use(xlink:href='#icon-account')
+        li.siteHeaderMobile__visualNav-cart.siteHeaderMobile__visualNav-cart--active
+          a(href='')
+            svg(viewbox='0 0 48 48')
+              use(xlink:href='#icon-cart')
+            span.siteHeaderMobile__visualNav-cartCount 4
+    form.siteHeaderMobile__visual-bottom
+      label.siteHeaderMobile__search
+        input.siteHeaderMobile__searchInput(autocomplete='off', type='text', name='', placeholder='Поиск')
+        .siteHeaderMobile__searchIcon
+          svg(width='12', height='12', viewbox='0 0 48 48', version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+            use(xlink:href='#icon-search', fill='#828282')
+      button.siteHeaderMobile__searchButton Найти
+  .siteHeaderMobile__menu
+    ul
+      li.siteHeaderMobile__account
+        div(for='')
+          span.siteHeaderMobile__itemContent
+            svg(viewbox='0 0 48 48')
+              use(xlink:href='#icon-cart')
+            p
+              | В корзине
+              span 2 вещи
+              |  на
+              span 4 524руб.
+    .siteHeaderMobile__menu-slides
+      include firstSlide.pug
+  .container__autorization
+    link(rel='stylesheet', type='text/css', href='autorization.css')
+    form.autorization
+      span.autorization--upTringle
+      .autorization-head Личный кабинет
+      div(data-style='inputText')
+        input#autorization-nickName(type='text')
+        label(for='autorization-nickName') E-mail
+      div(data-style='inputText')
+        input#autorization-password(type='text')
+        label(for='autorization-password') Пароль
+      .autorization__buttons
+        .autorization__buttonsContainer
+          .data-style-button-autorization(data-style='button')
+            button
+              span Зарегистрироваться
+          .data-style-button-autorization(data-style='button')
+            button
+              span Войти
+      .autorization-getPass
+        a(href='') Забыли пароль?
+    span.verticalAlignMiddle
