@@ -1,3 +1,4 @@
+@import "layout/style.css";
 @import "elements/inputForText/style.css";
 @import "elements/button/button.css";
 @import "elements/textarea/style.css";
@@ -5,10 +6,9 @@
 /*@import "elements/catalogCard/catalogCard.css";*/
 @import "elements/newCatalogCard/catalogCard.css";
 @import "elements/collections/collections.css";
+@import "elements/circleCollections/circleCollections.css";
 @import "elements/pigPrintsCarousel/pigPrintsCarousel.css";
 @import "header/header.css";
 @import "productCard/style.css";
 @import "catalog/catalog.css";
 @import "advantages/style.css";
-
-@import "layout/style.css";

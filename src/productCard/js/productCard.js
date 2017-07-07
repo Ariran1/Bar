@@ -22,15 +22,15 @@ class productCard {
 
 
 
-		this.lists = document.querySelectorAll('[data-droplist-container]');
-
-		for (var i = 0; i < this.lists.length; i++) {
-			console.log(this.lists[i].parentElement);
-			this.lists[i].addEventListener('click',(event)=>{
-
-				this.toggleDropList(event);
-
-			});
+		// this.lists = document.querySelectorAll('[data-droplist-container]');
+		// 
+		// for (var i = 0; i < this.lists.length; i++) {
+		// 	console.log(this.lists[i].parentElement);
+		// 	this.lists[i].addEventListener('click',(event)=>{
+		//
+		// 		this.toggleDropList(event);
+		//
+		// 	});
 		}
 		this.dropLists = document.querySelectorAll('[data-style="dropList"]');
 		new Click({

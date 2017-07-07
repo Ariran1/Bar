@@ -430,7 +430,7 @@ div .productCard__printOnOtherClothes-actionCard {
 }
 
 
-[data-style="dropList"] {
+.productCard [data-style="dropList"] {
   display: none;
   position: absolute;
   left:0;
@@ -441,7 +441,7 @@ div .productCard__printOnOtherClothes-actionCard {
   cursor: default;
 }
 
-[data-style="dropList"] ul {
+.productCard [data-style="dropList"] ul {
   padding: 8px;
   background: #fff;
   font-size: 1em;
@@ -452,16 +452,16 @@ div .productCard__printOnOtherClothes-actionCard {
   position: relative;
 }
 
-[data-style="dropList"] li {
+.productCard [data-style="dropList"] li {
   border-radius: 3px;
   padding: 4px 12px;
   cursor: pointer;
 }
 
-[data-style="dropList"] li:hover {
+.productCard [data-style="dropList"] li:hover {
   background: rgba(0,88,164,.1);
 }
-[data-style="dropList"] .sizeGrid {
+.productCard [data-style="dropList"] .sizeGrid {
   background: #4f4f4f;
   margin: 0 auto;
   color:#fff;

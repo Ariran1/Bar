@@ -1,0 +1,96 @@
+// mobile
+input#showAllFilters(type="checkbox")
+label.label__showAllFilters(for="showAllFilters") 
+  svg(viewBox="0 0 48 48")
+    use(xlink:href="#icon-filter")
+  span Фильтры
+  svg.label__showAllFilters-arrow(viewBox="0 0 48 48")
+    use(xlink:href="#icon-arrow")
+  
+      
+// mobile end
+.catalog__filters
+  .catalog__filters--helperForTable--tableRow
+    - var number = Math.random().toFixed(5)*1e5;
+    .catalog__filters--helperForTable--tableCell
+      .catalog__productType.filter
+        input.filter__input(id="showFilter" + number type="checkbox" name="showFiltersInCatalog")
+        label.filter__label(for="showFilter" + number)
+          span.filter__variable
+            svg(viewBox="0 0 48 48")
+              use(xlink:href="#icon-signpost")
+            span.filter__variable-text Тип изделия
+          svg.filter__arrow(viewBox="0 0 48 48")
+            use(xlink:href="#icon-arrow")
+      
+        - 
+          var dropList = [
+            {name:'Футболки',icon:'futbolki'},
+            {name:'Свитшоты',icon:'svitshoti'},
+            {name:'Худи',icon:'hudi'},
+            {name:'Толстовки',icon:'tolstovki'},
+            {name:'Платья',icon:'platya'},
+            {name:'Юбки',icon:''},
+            {name:'Майки',icon:'mayki'}];
+            
+        div(data-style="dropList")
+          ul
+            each item in dropList 
+              li
+                a
+                  svg(viewBox="0 0 48 48")
+                    use(xlink:href="#icon-" + item.icon)
+                  span= item.name
+                  
+    - var number = Math.random().toFixed(5)*1e5;
+    .catalog__filters--helperForTable--tableCell
+      .catalog__gender.filter
+        input.filter__input(id="showFilter" + number type="checkbox" name="showFiltersInCatalog")
+        label.filter__label(for="showFilter" + number)
+          span.filter__variable
+            svg(viewBox="0 0 48 48")
+              use(xlink:href="#icon-noGender")
+            span.filter__variable-text Пол
+          svg.filter__arrow(viewBox="0 0 48 48")
+            use(xlink:href="#icon-arrow")
+      
+        - 
+          var dropList = [
+            {name:'Мужчинам',icon:'men'},
+            {name:'Женщинам',icon:'woman'},
+            {name:'Мальчикам',icon:'boy'},
+            {name:'Девочкам',icon:'girl'}];
+            
+        div(data-style="dropList")
+          ul
+            each item in dropList 
+              li
+                a
+                  svg(viewBox="0 0 48 48")
+                    use(xlink:href="#icon-" + item.icon)
+                  span= item.name
+    - var number = Math.random().toFixed(5)*1e5;
+    .catalog__filters--helperForTable--tableCell
+      .filter
+        input.filter__input(id="showFilter" + number type="checkbox" name="showFiltersInCatalog")
+        label.filter__label(for="showFilter" + number)
+          span.filter__variable
+            svg(viewBox="0 0 48 48")
+              use(xlink:href="#icon-hit")
+            span.filter__variable-text По новизне
+          svg.filter__arrow(viewBox="0 0 48 48")
+            use(xlink:href="#icon-arrow")
+      
+        - 
+          var dropList = [
+            {name:'По новизне',icon:'new'},
+            {name:'По популярности',icon:'hit'}];
+            
+        div(data-style="dropList")
+          ul
+            each item in dropList 
+              li
+                a
+                  svg(viewBox="0 0 48 48")
+                    use(xlink:href="#icon-" + item.icon)
+                  span= item.name

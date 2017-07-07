@@ -33,13 +33,37 @@ html
     link(rel='stylesheet' href='css/style.css')
   body
     include elements/icons.html
-    
-    include header/header.pug 
-    include catalog/catalog.pug
-    //- include productCard/index.pug
-    include advantages/index.pug
-    
-    - var bigPrintsCarouselText = 'Вы недавно смотрели';
-    include elements/pigPrintsCarousel/pigPrintsCarousel.pug
+    style.
+      div.icones {
+        display: flex;
+        flex-wrap:wrap;
+        
+      }
+      div>div {
+        padding:20px;
+        width:90px;
+        text-align:center;
+      }
+      svg {
+        display:inline-block;
+        width:64px;
+        height:64px;
+      }
       
-    script(src='js/index.js')
+      
+      
+      
+    script.
+        var a = `<div class="icones">`;
+        var icons = document.querySelectorAll('[id]');
+        for (var i = 0; i < icons.length; i++) {
+          a += `<div>
+          <svg viewBox="0 0 48 48">
+            <use xlink:href="#`+ icons[i].id +`" style="stroke-width: 1px;fill: red;stroke: black;">
+          </svg>
+          <p contenteditable>` + icons[i].id + `</p></div>`;
+        }
+        a += `</div>`;
+        document.body.insertAdjacentHTML('beforeend',a);
+          
+      
