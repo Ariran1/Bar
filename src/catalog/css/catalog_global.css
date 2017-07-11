@@ -248,20 +248,20 @@
 
 
 
-.catalog .catalogCard {
+.catalog .newCatalogCard {
   width:23%;
   margin:1%;
   display: inline-block;
   vertical-align: top;
 }
 @media (--deskFix){
-  .catalog .catalogCard {
+  .catalog .newCatalogCard {
     width:31.334%;
     margin:1%;
   }
 }
 @media (--mobFix){
-  .catalog .catalogCard {
+  .catalog .newCatalogCard {
     width:48%;
     margin:1%;
   }

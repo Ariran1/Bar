@@ -3,7 +3,7 @@
 @import "elements/button/button.css";
 @import "elements/textarea/style.css";
 @import "elements/dropList/dropList.css";
-/*@import "elements/catalogCard/catalogCard.css";*/
+@import "elements/catalogCard/catalogCard.css";
 @import "elements/newCatalogCard/catalogCard.css";
 @import "elements/collections/collections.css";
 @import "elements/circleCollections/circleCollections.css";

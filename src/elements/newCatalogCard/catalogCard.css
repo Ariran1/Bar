@@ -1,7 +1,7 @@
 @custom-media --not-tablet (min-width:1024.1px);
 @custom-media --tablet (max-width:1024px);
 @custom-media --mobile (max-width:480px);
-.catalogCard {
+.newCatalogCard {
 	background: #fff;
 	border-radius: 3px;
 	z-index: 0;
@@ -12,18 +12,18 @@
   font-size: 1rem;
 }
 @media (--mobile) {
-	.catalogCard {
+	.newCatalogCard {
 	  font-size: 0.875rem;
 	}
 }
 @media (--tablet) {
-	.catalogCard {
-		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); 
+	.newCatalogCard {
+		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
 	}
 }
 @media (--not-tablet) {
 
-	.catalogCard:hover {
+	.newCatalogCard:hover {
 		z-index: 10;
 		border-radius: 3px 3px 0 0;
 		box-shadow: 0 4px 64px rgba(0, 0, 0, 0.15), 0 0 2px rgba(0, 0, 0, 0.15);
@@ -31,7 +31,7 @@
 	}
 
 }
-.catalogCard__link {
+.newCatalogCard__link {
 	display: block;
 	text-decoration: none;
 	background: #fff;
@@ -42,30 +42,30 @@
 
 }
 
-.catalogCard__imageContainer {
+.newCatalogCard__imageContainer {
 	text-align: center;
 	height:320px;
 }
 @media (--tablet) {
-	.catalogCard__imageContainer {
+	.newCatalogCard__imageContainer {
 		height:280px;
 	}
 }
 @media (--mobile) {
-	.catalogCard__imageContainer {
+	.newCatalogCard__imageContainer {
 		height:230px;
 	}
 }
-.catalogCard__image {
+.newCatalogCard__image {
 	max-width:100%;
 	max-height:100%;
 	vertical-align: middle;
-	&.catalogCard__image--high {
+	&.newCatalogCard__image--high {
 		margin: 0 -100px;
 		max-width: initial;
 	}
 }
-.catalogCard__like {
+.newCatalogCard__like {
 	position: absolute;
 	top:0;
 	right:0;
@@ -83,24 +83,24 @@
 		display: block;
 	}
 }
-[name="catalogCard-like"] {
+[name="newCatalogCard-like"] {
 	display: none;
 }
-[name="catalogCard-like"]:checked ~ svg {
+[name="newCatalogCard-like"]:checked ~ svg {
 	fill:red;
 	stroke-width:0;
 }
-.catalogCard__contentContainer {
+.newCatalogCard__contentContainer {
 	position: relative;
 	text-align: center;
 	padding-bottom: 10px;
 }
 @media (--tablet) {
-	.catalogCard__contentContainer {
+	.newCatalogCard__contentContainer {
 		padding-bottom: 0;
 	}
 }
-.catalogCard__action {
+.newCatalogCard__action {
 	font-size: 0.75em;
 	position: absolute;
   width: 92%;
@@ -118,11 +118,11 @@
 
 }
 @media (--tablet) {
-	.catalogCard__action {
+	.newCatalogCard__action {
 		bottom: 100%;
 	}
 }
-.catalogCard__price {
+.newCatalogCard__price {
 	letter-spacing: -.02em;
 	font-family: 'Bebas';
 	font-size: 1.5em;
@@ -131,51 +131,51 @@
 	padding: 20px 0 4px;
 }
 @media (--tablet) {
-	.catalogCard__price{
+	.newCatalogCard__price{
 		padding: 8px 0 0;
 	}
 }
-.catalogCard__price-before,
-.catalogCard__price-after {
+.newCatalogCard__price-before,
+.newCatalogCard__price-after {
 	padding:0 4px;
 }
-.catalogCard__price-before {
+.newCatalogCard__price-before {
 	font-weight: 200;
 	text-decoration: line-through;
 }
-.catalogCard__price-after {
+.newCatalogCard__price-after {
 	font-weight: 700;
 	color: #0054a6;
 }
-.catalogCard__description {
+.newCatalogCard__description {
 	font-weight: 400;
 	color: #666;
 	font-size: .875em;
 	line-height: 1.15em;
 }
-.catalogCard__description-productType,
-.catalogCard__description-name {
+.newCatalogCard__description-productType,
+.newCatalogCard__description-name {
 	overflow: hidden;
 	text-align: center;
 	padding: 4px 0;
 }
 @media (--tablet) {
-	.catalogCard__description-productType,
-	.catalogCard__description-name {
+	.newCatalogCard__description-productType,
+	.newCatalogCard__description-name {
 		padding: 0;
 	}
 }
-.catalogCard__description-name {
+.newCatalogCard__description-name {
 	font-weight: bold;
 }
-.catalogCard__description-productType {
+.newCatalogCard__description-productType {
 	color:#bdbdbd;
 }
-.catalogCard__description > span {
+.newCatalogCard__description > span {
 	display: block;
 }
 
-.catalogCard__hoverContent {
+.newCatalogCard__hoverContent {
 	display: none;
 	position: absolute;
 	top:100%;
@@ -188,24 +188,24 @@
 
 }
 @media (--tablet) {
-	.catalogCard__hoverContent {
+	.newCatalogCard__hoverContent {
 		display: block;
 		position: relative;
 		box-shadow: initial;
 	}
 }
 @media (--not-tablet) {
-	.catalogCard:hover .catalogCard__hoverContent {
+	.newCatalogCard:hover .newCatalogCard__hoverContent {
 		display: block;
 	}
 }
 
 
-.catalogCard [data-style="button"] {
+.newCatalogCard [data-style="button"] {
 	padding:0px 12px 12px;
 }
 @media (--tablet) {
-	.catalogCard [data-style="button"] {
+	.newCatalogCard [data-style="button"] {
 		padding:8px;
 	}
 }
