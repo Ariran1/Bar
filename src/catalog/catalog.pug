@@ -1,6 +1,10 @@
 .catalog
   .catalog__head.clearFix
-    .catalog__name Наш <span>каталог</span>
+    input(id="showMobileCollections" type="checkbox")
+    label(for="showMobileCollections" class="catalog__name") Наш &nbsp;<span>каталог</span>
+      svg.catalog__name-arrow(viewBox="0 0 48 48")
+        use(xlink:href="#icon-arrow")
+          
     .catalog__breadCrumbs
       ul.catalog__breadCrumbs-list
         li.catalog__breadCrumbs-listItem 

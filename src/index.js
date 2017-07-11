@@ -1,8 +1,10 @@
 require('./productCard/reviews/index.js');
-require('./productCard/js/productCard.js');
+// require('./productCard/js/productCard.js');
 // require('./elements/dropList/dropList.js');
 require('./elements/pigPrintsCarousel/pigPrintsCarousel.js');
 require('./advantages/index.js');
+
+require('./catalog/catalog.js');
 
 var owlCarousel = require('./js/owl.carousel.min.js');
 owlCarousel.constructor();

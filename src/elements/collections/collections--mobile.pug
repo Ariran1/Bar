@@ -1,0 +1,48 @@
+
+
+
+
+
+- var pictures = ['Рисунки и картинки','Посмотреть все','Dark','Abstraction','Art Core','Color','Мемы','Vegan','Надписи','Для мужчин','Черепа','Dark'];
+- var numbers = ['23','8676','518','789','90','98','707','1','21','8','231','65'];
+
+.collectionMobile
+  .collectionMobile__name
+    a.collectionMobile__nameLink
+      svg(viewBox="0 0 48 48")
+        use(xlink:href="#icon-top")
+      span Еда
+  .collectionMobile__name
+    a.collectionMobile__nameLink 
+      svg(viewBox="0 0 48 48")
+        use(xlink:href="#icon-hit")
+      | Аквариумы
+  .collectionMobile__name
+    a.collectionMobile__nameLink 
+      svg(viewBox="0 0 48 48")
+        use(xlink:href="#icon-new")
+      | Аквариумы
+    
+  - for ( var t = 0; t < 3; t++ )
+    - var a = 'showColumn_' + 10000 + +(Math.random() * 89999).toFixed(0);
+    .collectionMobile__name
+      input.collectionMobile__inputShow(id=a type="checkbox" name="collectionMobileShowInputs")
+      label.collectionMobile__labelShow(for=a)
+        span.collectionMobile__mobileIcons
+          svg(viewBox="0 0 48 48")
+            use(xlink:href="#icon-ok")
+        span Рыбки
+        svg.collectionMobile__svgArrow--mobile(viewBox="0 0 48 48")
+          use(xlink:href="#icon-arrow")
+      ul.collectionMobile__itemsList
+        - for ( var i = 0; i < pictures.length; i++ )
+          li.collectionMobile__item
+            a.collectionMobile__link
+              span.collectionMobile__mobileIcons
+                svg(viewBox="0 0 48 48")
+                  use(xlink:href="#icon-ok")
+              span #{pictures[i]} &nbsp;
+                span.collectionMobile__itemCount (#{numbers[i]})
+              svg.collectionMobile__itemCount--svgArrow(viewBox="0 0 48 48")
+                use(xlink:href="#icon-lineArrow")
+  

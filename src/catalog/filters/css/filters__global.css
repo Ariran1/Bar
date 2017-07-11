@@ -8,6 +8,7 @@
   text-align: center;
   z-index: 24;
   cursor: default;
+  color:#4f4f4f;
 }
 
 .catalog [data-style="dropList"] ul {
@@ -19,17 +20,28 @@
   box-shadow: 0 4px 64px rgba(0,0,0,0.15);
   border-radius:3px;
   position: relative;
+  font-size: 0;
+  white-space: normal;
+  text-align: left;
 }
 
 .catalog [data-style="dropList"] li {
   border-radius: 3px;
   padding: 0;
   cursor: pointer;
+  display: inline-block;
+  font-size: .875rem;
 }
 
 .catalog [data-style="dropList"] li:hover {
   background: rgba(0,88,164,.1);
 }
+@media (--mobFix) {
+  .catalog [data-style="dropList"] li:hover {
+    background: rgba(0,0,0,0);
+  }
+}
+
 /* ===== ========= =========== ============= ==============*/
 
 
@@ -39,6 +51,11 @@
   width:50%;
   position: relative;
   z-index: 2;
+}
+@media (max-width:1024px) and (min-width:900px) {
+  .catalog__filters {
+    width:65%;
+  }
 }
 @media (--tabFix) {
   .catalog__filters {
@@ -68,14 +85,17 @@
   .catalog__filters--helperForTable--tableCell {
     display: block;
     margin:10px;
-    min-width:150px;
+    min-width:155px;
   }
 }
+@media (--mobFix) {
+  .catalog__filters {
+    border-bottom: 1px solid #e0e0e0;
+  }
 
+}
 
 .filter {
-  padding: 8px;
-  width:50%;
   box-sizing: border-box;
   display: table;
   height: 48px;
@@ -88,14 +108,18 @@
   display: flex;
   align-items: center ;
   justify-content: space-around;
-  width: 90%;
+  margin-right: 10px;
 
   & [data-style="dropList"] {
     display: none;
   }
 }
 
-
+@media (--tablet) {
+  .filter {
+    margin-right:8px;
+  }
+}
 @media (--tabFix) {
   .filter {
     display: block;
@@ -114,12 +138,13 @@
 .filter__label {
   vertical-align: middle;
   line-height: 48px;
-  padding: 0 0 0 10px;
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
   width: 100%;
   align-items: center;
+  padding: 0 10px;
+  overflow: hidden;
 }
 .filter__variable {
   vertical-align: middle;
@@ -127,21 +152,48 @@
   & svg {
     width:32px;
     height:32px;
+    fill: #e0e0e0;
     box-sizing: border-box;
-    padding:10px;
+    margin-right:6px;
     vertical-align: middle;
   }
 }
+@media (--mobFix) {
+  .filter__variable {
+    margin: 0 12px 0 6px;
+
+    & svg {
+      margin-right: 12px;
+    }
+  }
+}
+.filter__variable-text {
+  vertical-align: middle;
+  vertical-align: -5%;
+  color:#0054a6;
+  font-weight: 700;
+  display: inline-block;
+  max-width: 76px;
+}
+@media (--mobFix) {
+  .filter__variable-text {
+    color:inherit;
+    font-weight: inherit;
+  }
+}
 .filter__arrow {
-  width:32px;
-  min-width: 32px;
+  width:28px;
+  min-width: 28px;
   height:32px;
   min-height: 32px;
   vertical-align: middle;
-  padding:10px;
+  padding:10px 8px;
   box-sizing: border-box;
   transform: rotate(90deg);
   transition: transform .2s ease;
+  border-radius: 4px;
+  background: rgba(255,255,255,.95);
+
 }
 .filter [data-style="dropList"] {
   /*single column + icons*/
@@ -160,12 +212,16 @@
 
   & svg {
     width:32px;
+    min-width:32px;
     height:32px;
+    min-height:32px;
     padding: 2px 4px;
+    fill: #bdbdbd;
   }
 
   & span {
     padding: 0 32px 0 8px;
+    line-height: 1em;
 
   }
 
@@ -178,12 +234,21 @@
   }
 
   & li {
-    float: left;
+
     width:50%;
   }
 
 }
+.filter.catalog__popular .filter__variable svg {
+  display: none;
+}
+
 @media (--mobFix) {
+  .filter.catalog__popular .filter__variable svg {
+    display: inline-block;
+  }
+
+
   .filter.catalog__gender [data-style="dropList"] {
 
     & ul {
@@ -191,10 +256,17 @@
     }
 
     & li {
-      float: left;
       width:50%;
     }
 
+  }
+
+  .filter.catalog__popular [data-style="dropList"] {
+
+
+    & li {
+      display: block;
+    }
   }
 }
 [name="showFiltersInCatalog"]:checked ~ label .filter__arrow{

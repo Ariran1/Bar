@@ -1,5 +1,5 @@
 // mobile
-input#showAllFilters(type="checkbox")
+input#showAllFilters(type="checkbox" checked)
 label.label__showAllFilters(for="showAllFilters") 
   svg(viewBox="0 0 48 48")
     use(xlink:href="#icon-filter")
@@ -9,43 +9,55 @@ label.label__showAllFilters(for="showAllFilters")
   
       
 // mobile end
+
+// collections mobile
+include ../../elements/collections/collections--mobile.pug
+// collections end
+
 .catalog__filters
   .catalog__filters--helperForTable--tableRow
     - var number = Math.random().toFixed(5)*1e5;
     .catalog__filters--helperForTable--tableCell
       .catalog__productType.filter
-        input.filter__input(id="showFilter" + number type="checkbox" name="showFiltersInCatalog")
-        label.filter__label(for="showFilter" + number)
+        input.filter__input(id="showFilter" + number type="checkbox" name="showFilterInCatalog" checked)
+        label.filter__label.color_blue(for="showFilter" + number)
           span.filter__variable
-            svg(viewBox="0 0 48 48")
+            svg(viewBox="0 0 48 48" style="vertical-align: bottom;") //- тег style только для иконки signPost
               use(xlink:href="#icon-signpost")
-            span.filter__variable-text Тип изделия
+            span.filter__variable-text Майки
           svg.filter__arrow(viewBox="0 0 48 48")
             use(xlink:href="#icon-arrow")
       
         - 
           var dropList = [
             {name:'Футболки',icon:'futbolki'},
-            {name:'Свитшоты',icon:'svitshoti'},
-            {name:'Худи',icon:'hudi'},
-            {name:'Толстовки',icon:'tolstovki'},
-            {name:'Платья',icon:'platya'},
-            {name:'Юбки',icon:''},
+            {name:'Свитшоты',icon:'tolstovki'},
+            {name:'Худи с капюшоном',icon:'hudi'},
+            {name:'Бомберы',icon:'bomber'},
+            {name:'Платья',icon:'platie-s-rukavom'},
+            {name:'Юбки',icon:'ubka-s-melkimi-skladkami'},
             {name:'Майки',icon:'mayki'}];
             
         div(data-style="dropList")
           ul
             each item in dropList 
-              li
-                a
-                  svg(viewBox="0 0 48 48")
-                    use(xlink:href="#icon-" + item.icon)
-                  span= item.name
+              if (item.name.length == 5)
+                li.color_blue
+                  a
+                    svg(viewBox="0 0 48 48")
+                      use(xlink:href="#icon-" + item.icon)
+                    span= item.name
+              else 
+                li
+                  a
+                    svg(viewBox="0 0 48 48")
+                      use(xlink:href="#icon-" + item.icon)
+                    span= item.name
                   
     - var number = Math.random().toFixed(5)*1e5;
     .catalog__filters--helperForTable--tableCell
       .catalog__gender.filter
-        input.filter__input(id="showFilter" + number type="checkbox" name="showFiltersInCatalog")
+        input.filter__input(id="showFilter" + number type="checkbox" name="showFilterInCatalog")
         label.filter__label(for="showFilter" + number)
           span.filter__variable
             svg(viewBox="0 0 48 48")
@@ -71,13 +83,13 @@ label.label__showAllFilters(for="showAllFilters")
                   span= item.name
     - var number = Math.random().toFixed(5)*1e5;
     .catalog__filters--helperForTable--tableCell
-      .filter
-        input.filter__input(id="showFilter" + number type="checkbox" name="showFiltersInCatalog")
+      .catalog__popular.filter
+        input.filter__input(id="showFilter" + number type="checkbox" name="showFilterInCatalog")
         label.filter__label(for="showFilter" + number)
           span.filter__variable
             svg(viewBox="0 0 48 48")
               use(xlink:href="#icon-hit")
-            span.filter__variable-text По новизне
+            span.filter__variable-text По популярности
           svg.filter__arrow(viewBox="0 0 48 48")
             use(xlink:href="#icon-arrow")
       
@@ -93,4 +105,4 @@ label.label__showAllFilters(for="showAllFilters")
                 a
                   svg(viewBox="0 0 48 48")
                     use(xlink:href="#icon-" + item.icon)
-                  span= item.name
+                  span(style="white-space:nowrap;") #{item.name}

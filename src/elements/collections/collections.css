@@ -1,20 +1,29 @@
+@custom-media --leftBarMax (max-width:1270px);
+@custom-media --deskEnd (max-width:1200px);
+@custom-media --deskFix (max-width:1100px);
+@custom-media --tablet (max-width:1024px);
+@custom-media --tabFix (max-width:900px);
+@custom-media --mobFix (max-width:700px);
+@custom-media --mobile (max-width:480px);
+
 .collection {
   font:400 16px/normal 'PT Sans';
   padding: 10px;
 
-  & input {
-    display: none;
-  }
 }
 @media (max-width:1270px) {
   .collection {
     padding-left: 45px;
   }
 }
-.collection__inputShow:checked ~ .collection__itemsList {
+[name="collectionShowInputs"] {
+  display: none;
+}
+[name="collectionShowInputs"]:checked ~ ul {
   display: block;
 }
-.collection__inputShow:checked ~ .collection__labelShow {
+
+[name="collectionShowInputs"]:checked ~ .collection__labelShow {
   color:#0054a6;
   font-weight: bold;
   & svg {
@@ -39,8 +48,9 @@
 .collection__labelShow {
   position: relative;
   & span {
+
   }
-  & svg {
+  & .collection__svgArrow {
     display: block;
     position: absolute;
     top:0;
@@ -50,6 +60,24 @@
     left:-40px;
     vertical-align: middle;
     height: 32px;
+    box-sizing: border-box;
+    width: 32px;
+    padding: 8px;
+    transform: rotate3d(0,0,1,90deg);
+    transition: transform .2s ease-in-out,opacity .2s ease .3s;
+  }
+
+  & .collection__svgArrow--mobile {
+    display: block;
+    position: absolute;
+    top:0;
+    right:0;
+    margin: 0 4px;
+    bottom:0;
+    fill: currentColor;
+    left:-40px;
+    vertical-align: middle;
+    height: inherit;
     box-sizing: border-box;
     width: 32px;
     padding: 8px;
@@ -68,4 +96,161 @@
   color:#888;
   padding: 0 0 0 4px;
   font-weight: normal;
+}
+
+
+/* ================================================== */
+
+
+.collectionMobile {
+  display: none;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+#showMobileCollections:checked ~ .collectionMobile {
+  display: block;
+}
+#showMobileCollections:checked ~ .catalog__name .catalog__name-arrow {
+  transform: rotateY(180deg) rotateZ(-90deg);
+}
+
+@media (min-width:900.1px) {
+  .collectionMobile {
+    display: none!important;
+  }
+}
+@media (--tabFix) {
+  .collectionMobile__name:nth-last-of-type(1) ul {
+    border-bottom: none !important;
+  }
+}
+.collectionMobile__nameLink {
+  display: flex;
+  align-items: center;
+
+  & svg {
+    height:48px;
+    width:60px;
+    padding: 8px;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: middle;
+    fill: #0054a6;
+  }
+
+  & span{
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &:after {
+    content:'';
+    display: block;
+    position: absolute;
+    bottom: 0;
+
+    border-bottom: 1px solid #e0e0e0;
+    width:70%;
+    left:25%;
+
+  }
+}
+.collectionMobile__mobileIcons {
+  height:48px;
+  width:60px;
+  min-width: 60px;
+  padding: 8px;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+
+  & svg {
+    width: 32px;
+    height: 32px;
+    box-sizing: border-box;
+    padding: 10px;
+    display: none;
+    top:0;
+    left:0;
+    right:0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  &:before {
+    content:'';
+    width: 6px;
+    height: 6px;
+    border: 1px solid #bdbdbd;
+    display: block;
+    top:0;
+    left:0;
+    right:0;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+    border-radius: 3px;
+    background: #fff;
+  }
+
+  & + span {
+    padding-right:45px;
+  }
+}
+.collectionMobile__mobileIcons.collectionMobile__mobileIcons--ok {
+
+  & svg {
+    display: block;
+    fill:#0054a6;
+  }
+
+  &:before {
+    display: none;
+  }
+}
+[name="collectionMobileShowInputs"] {
+  display: none;
+}
+
+[name="collectionMobileShowInputs"]:checked ~ .collectionMobile__labelShow .collectionMobile__svgArrow--mobile {
+  transform: rotateY(180deg) rotateZ(-90deg);
+}
+
+
+.collectionMobile__svgArrow--mobile {
+  position: absolute;
+  height:48px;
+  width:32px;
+  box-sizing: border-box;
+  padding: 10px;
+  right: 10px;
+  transform: rotate(90deg);
+}
+.collectionMobile__labelShow {
+  display: block;
+  position: relative;
+  transition: all .2s ease;
+}
+.collectionMobile__itemsList {
+  background: #f2f2f2;
+  border-top:1px solid #e0e0e0;
+  border-bottom:1px solid #e0e0e0;
+  display: none;
+}
+[name="collectionMobileShowInputs"]:checked ~ ul {
+  display: block;
+}
+.collectionMobile__link {
+  display: flex;
+  align-items: center;
+}
+.collectionMobile__itemCount--svgArrow {
+  fill:#828282;
+  position: absolute;
+  height:48px;
+  width:32px;
+  box-sizing: border-box;
+  padding: 10px;
+  right: 10px;
 }
