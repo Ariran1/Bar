@@ -15,9 +15,14 @@
   margin: 31px 1% .5%;
   box-sizing: border-box;
 }
-@media (--tabFix) {
+@media (--deskFix) {
   .newProducts__head {
-    margin:1% 1% .5%;
+    margin:1.5% 1.5% 0;
+  }
+}
+@media (--mobFix) {
+  .newProducts__head {
+    margin:2% 2% 0;
   }
 }
 .newProducts__sectionName {
