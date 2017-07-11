@@ -35,12 +35,12 @@
 }
 
 @media (--deskFix){
-  .newProducts__catalogCard .catalogCard:nth-of-type(4) {
+  .newProducts__catalogCard .newCatalogCard:nth-of-type(4) {
     display: none;
   }
 }
 @media (--mobFix){
-  .newProducts__catalogCard .catalogCard:nth-of-type(3) {
+  .newProducts__catalogCard .newCatalogCard:nth-of-type(3) {
     display: none;
   }
 }
